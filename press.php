@@ -10,7 +10,7 @@
 
 <div id="content">
 	<h1 id="page-title"><?= $page_title; ?></h1>
-	<ul class="reduced press-list">
+	<ul class="press-list">
 		<li><a href="http://www.details.com/story/best-barbershops-in-the-usa" target="_blank">Details Magazine</a></li>
 		<li><a href="http://www.hypemke.com/stag-barbershop" target="_blank">Hype MKE</a></li>
 		<li><a href="http://www.onmilwaukee.com/living/articles/stagbarbershop.html" target="_blank">OnMilwaukee.com</a></li>
@@ -18,6 +18,7 @@
 		<li><a href="http://www.greatermkemen.com/2012/02/heview-stag-barbershop.html" target="_blank">Greater MKE Men</a></li>
 		<li><a href="http://www.urbanmilwaukee.com/2011/11/mark-herro-aka-mantic59-comes-to-stag-and-brings-his-razor" target="_blank">Urban Milwaukee</a></li>
 	</ul>
+	<a class="btn" href="https://www.vagaro.com/stagbarbershop#online-scheduling" target="_blank">Book Appointment</a>
 	<div class="flexslider">
 		<ul class="reduced slides">
 			<li><img src="<?= $image ?>slideshow/press-1.jpg<?= $version; ?>" alt="" /></li>

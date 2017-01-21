@@ -3,9 +3,6 @@ module.exports = function (grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		contentDir: '',
-		jsSrc: [
-			'<%= contentDir %>scripts/global.js'
-		],
 		sassSrc: [
 			'<%= contentDir %>scss/*.scss',
 			//excludes
@@ -16,8 +13,7 @@ module.exports = function (grunt) {
 		sass: {
 			dist: {
 				options: {
-					style: 'compressed',
-					sourcemap: 'none'
+					style: 'compressed'
 				},
 				expand: true,
 				flatten: true,
@@ -27,18 +23,10 @@ module.exports = function (grunt) {
 			}
 		},
 
-		jshint: {
-			all: ['Gruntfile.js', '<%= jsSrc %>']
-		},
-
 		watch: {
 			sass: {
 				files: '<%= contentDir %>scss/**/*.scss',
 				tasks: 'sass:dist'
-			},
-			js: {
-				files: ['Gruntfile.js', '<%= jsSrc %>'],
-				tasks: 'jshint'
 			}
 		}
 

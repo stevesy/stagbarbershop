@@ -23,7 +23,7 @@
 		<h2>Add&#45;on services</h2>
 		<p>Beard <span class="sep">|</span> Mustache Trim <span class="block">Brow <span class="sep">|</span> Ear <span class="sep">|</span> Neck Waxing</span> Grey Blending <span class="sep">|</span> Shoe Shines <span class="smaller">(Tues&#45;Fri)</span></p>
 		<p class="small">&#42;Please ask for prices.</p>
-		<a href="/contact" class="btn">Appointments</a>
+		<a class="btn" href="https://www.vagaro.com/stagbarbershop#online-scheduling" target="_blank">Book Appointment</a>
 	</div>
 	<div class="flexslider">
 		<ul class="reduced slides"> 

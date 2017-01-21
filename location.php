@@ -31,19 +31,16 @@
 	</div>
 	<div class="hr"><hr /></div>
 	<div class="section">
-		<div class="vcard">
-			<address class="author">
-				<span class="fn org">Stag Barbershop</span>
-			</address>
-			<span class="adr">
-				<span class="street-address">3064 South Delaware Avenue</span><br />
-				<span class="locality">Milwaukee</span> <span class="region">WI</span> <span class="postal-code">53207</span><br />
-			</span>
+		<p>
+			Stag Barbershop<br />
+			3064 South Delaware Avenue<br />
+			Milwaukee, WI 53207<br />
 			<span class="tel">
 				<span class="value">414.489.<span>STAG</span></span>
-			</span>
-		</div>
-		<p><a class="btn" href="http://g.co/maps/qbknr" target="_blank">Get Directions</a></p>
+			</span><br />
+			<a href="http://g.co/maps/qbknr" target="_blank">Get Directions</a>
+		</p>
+		<a class="btn" href="https://www.vagaro.com/stagbarbershop#online-scheduling" target="_blank">Book Appointment</a>
 	</div>
 	<a href="http://g.co/maps/qbknr" target="_blank"><img src="<?= $image ?>map.png" id="map" width="370" height="400" /></a>
 </div>

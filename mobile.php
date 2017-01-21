@@ -62,12 +62,13 @@
 				<div class="hr"><hr /></div>
 
 				<h2>Contact</h2>
-				<h3>Appointments</h3>
 				<p><a href="tel:4144897824">414.489.STAG</a></p>
-				<p style="font-size:13px;margin:-16px 0 21px">&#42;We do not accept appointments via email.</p>
+				<h3>Appointments</h3>
+				<p><a href="https://www.vagaro.com/stagbarbershop#online-scheduling" target="_blank">Book Online</a></p>
 
 				<h3>General Inquiries</h3>
 				<p><a href="mailto:info@stagbarbershop.com">info@stagbarbershop.com</a></p>
+				<p style="font-size:13px;margin:-16px 0 0">&#42;We do not accept appointments via email.</p>
 			</div>
 
 			<footer>&copy; <?= date('Y'); ?> <?= $client; ?> &bull; <a href="<?= $root ?>?desktop=1">View Full Site</a></footer>

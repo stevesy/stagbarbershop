@@ -14,10 +14,14 @@
 
 /* ===== colors ==================================== */
 
-.success { color: #090; }
+.success {
+	color: #090;
+}
 
 .error,
-.required { color: #c00; }
+.required {
+	color: #c00;
+}
 
 /* ===== btn =================================== */
 
@@ -75,13 +79,21 @@ h2 {
 	margin-bottom: 5px;
 }
 
-h3 { font-size: 18px; }
+h3 {
+	font-size: 18px;
+}
 
-h4 { font-size: 16px; }
+h4 {
+	font-size: 16px;
+}
 
-h5 { font-size: 14px; }
+h5 {
+	font-size: 14px;
+}
 
-h6 { font-size: 12px; }
+h6 {
+	font-size: 12px;
+}
 
 h1,
 h2,
@@ -170,8 +182,11 @@ li {
 			font-size: 15px;
 			line-height: 1;
 
-			&.on a {
-				color: #630c00;
+			&.on {
+
+				a {
+					color: #630c00;
+				}
 			}
 		}
 
@@ -279,10 +294,10 @@ li {
 	border: 2px solid #630c00;
 	list-style: none;
 	padding: 0;
-}
 
-.flexslider ul li {
-	display: none;
+	li {
+		display: none;
+	}
 }
 
 #content {
@@ -312,7 +327,9 @@ li {
 
 /* ===== footer ==================================== */
 
-#footer { color: #666; } 
+#footer {
+	color: #666;
+} 
 
 #footer {
 	position: relative;
@@ -327,7 +344,9 @@ li {
 	text-decoration: underline;
 }
 
-#footer a:hover { color: #444; }
+#footer a:hover {
+	color: #444;
+}
 
 #footer .right,
 #footer .left,
@@ -339,30 +358,30 @@ li {
 	position: absolute;
 	top: 7px;
 	right: 0;
-}
 
-#social-media li {
-	display: inline-block;
-	margin-left: 7px;
-}
-
-#social-media a {
-	display: block;
-	width: 20px;
-	height: 20px;
-	background: transparent url('../images/social.png') no-repeat left top;
-	text-indent: -9999px;
-	transition: opacity 150ms;
-
-	&:hover {
-		opacity: 0.8;
+	li {
+		display: inline-block;
+		margin-left: 7px;
 	}
 
-	&#facebook {
+	a {
+		display: block;
+		width: 20px;
+		height: 20px;
+		background: transparent url('../images/social.png') no-repeat left top;
+		text-indent: -9999px;
+		transition: opacity 150ms;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	#facebook {
 		background-position: left top;
 	}
 
-	&#twitter {
+	#twitter {
 		background-position: right top;
 	}
 }
@@ -391,30 +410,53 @@ fieldset.super .textfield.error { border: 1px solid #f00; }
 
 /* ===== services ================================== */
 
-.services #content ul.service-list li {
+.service-list li {
 	clear: both;
 	font-size: 21px;
-}
 
-.services #content ul.service-list li span { float: right; }
+	span {
+		float: right;
+	}
+}
 
 /* ===== products ================================== */
 
-.products ul.product-list li { margin-bottom: .15em; }
+.product-list {
+
+	li {
+		margin-bottom: 0.15em;
+	}
+}
 
 /* ===== press ==================================== */
 
-.press ul.press-list li { font-size: 21px; }
+.press-list {
+	font-size: 21px;
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 1.5em;
 
-.press ul.press-list li a { color: #000; }
+	a {
+		color: #000;
+	}
+}
 
 /* ===== hours & location ========================== */
 
-.hours { font-size: 1.1em; }
+.location {
 
-.hours li { margin-bottom: .25em; }
+	.tabbed {
+		width: 160px;
+	}
+}
 
-.location #content .vcard { padding-bottom: 1em; }
+.hours {
+	font-size: 1.1em;
+
+	li {
+		margin-bottom: 0.25em;
+	}
+}
 
 #map {
 	position: absolute;
@@ -423,67 +465,57 @@ fieldset.super .textfield.error { border: 1px solid #f00; }
 	border: 2px solid #630c00;
 }
 
-.location .tabbed { width: 160px; }
-
 /* ===== contact =================================== */
 
-.contact #content {
-	width: auto;
-	margin-left: 0;
+.contact {
+
+	#content {
+		width: auto;
+		margin-left: 0;
+	}
+
+	.row1 {
+		margin-top: 20px;
+
+		h2 {
+			color: #000;
+		}
+
+		.col1 {
+			width: 21%;
+		}
+
+		.col2 {
+			width: 25%;
+		}
+
+		.col3 {
+			width: 27%;
+		}
+
+		.col4 {
+			float: right;
+			width: auto;
+		}
+	}
+
+	.row2 {
+		margin: 10px 0 -10px;
+
+		.col1 {
+			width: 203px;
+		}
+
+		.col2 {
+			width: 492px;
+			float: right;
+		}
+
+		img {
+			border: 2px solid #630c00;
+		}
+	}
 }
-
-.contact .row a { color: #000; }
-
-.contact .row1 { margin-top: 20px; }
-
-.contact .row1 .col1 { width: 21%; }
-
-.contact .row1 .col2 { width: 25%; }
-
-.contact .row1 .col3 { width: 27%; }
-
-.contact .row1 .col4 {
-	float: right;
-	width: auto;
-}
-
-.contact .row2 { margin: 10px 0 -10px; }
-
-.contact .row2 .col1 { width: 203px; }
-
-.contact .row2 .col2 {
-	width: 492px;
-	float: right;
-}
-
-.contact .row2 img { border: 2px solid #630c00; }
-
-#form-email-list .field {
-	overflow: hidden;
-	margin-bottom: 5px;
-}
-
-#form-email-list label,
-#form-email-list .textfield { float: left; }
-
-#form-email-list label {
-	width: 40px;
-	line-height: 24px;
-}
-
-#form-email-list label.error {
-	clear: both;
-	width: auto;
-	padding-left: 40px;
-	line-height: 1.6;
-}
-
-#form-email-list .textfield {
-	width: 152px;
-	height: 18px;
-}
-
-#form-email-list .btn {	margin: 0 0 0 40px; }
 
 /* ===== default =================================== */
 
@@ -493,13 +525,21 @@ fieldset.super .textfield.error { border: 1px solid #f00; }
 	line-height: 1.4em;
 }
 
-.block { display: block; }
+.block {
+	display: block;
+}
 
-.text-center { text-align: center; }
+.text-center {
+	text-align: center;
+}
 
-.text-right { text-align: right; }
+.text-right {
+	text-align: right;
+}
 
-.text-left { text-align: left; }
+.text-left {
+	text-align: left;
+}
 
 .alignright,
 .right {
@@ -513,11 +553,17 @@ fieldset.super .textfield.error { border: 1px solid #f00; }
 	float: left;
 }
 
-.clear-right { clear: right; }
+.clear-right {
+	clear: right;
+}
 
-.clear-left { clear: left; }
+.clear-left {
+	clear: left;
+}
 
-.clear { clear: both; }
+.clear {
+	clear: both;
+}
 
 .reduced,
 fieldset.super ol {
@@ -528,32 +574,39 @@ fieldset.super ol {
 }
 
 .hid,
-#site-title a { text-indent: -9999px; }
+#site-title a {
+	text-indent: -999em;
+}
 
 .hide,
 .print,
-.hr hr { display: none; }
+.hr hr {
+	display: none;
+}
 
 /* ===== print ===================================== */
 
 @media print {
-	
 	.screen,
 	#branding,
 	#nav,
 	.btn,
 	form,
-	#site-title { display: none; }
+	#site-title {
+		display: none;
+	}
 	
 	.print,
-	.hr hr { display: block !important; }
+	.hr hr {
+		display: block !important;
+	}
 	
-	#header img { margin: 0 auto; }
+	#header img {
+		margin: 0 auto;
+	}
 	
 	#container {
 		margin-top: 0;
-		-moz-box-shadow: none;
-		-webkit-box-shadow: none;
 		box-shadow: none;
 	}
 	
@@ -563,6 +616,7 @@ fieldset.super ol {
 		margin-top: -22px;
 	}
 	
-	.hr { margin: 0; }
-	
+	.hr {
+		margin: 0;
+	}
 }

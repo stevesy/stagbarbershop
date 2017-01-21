@@ -1,5 +1,5 @@
 <?php
-	$version = "?v=20160209";
+	$version = "?v=20170120";
 	
 	$isProduction = false;
 	if (($_SERVER["HTTP_HOST"] == "www.stagbarbershop.com") || ($_SERVER["HTTP_HOST"] == "stagbarbershop.com")) $isProduction = true;
