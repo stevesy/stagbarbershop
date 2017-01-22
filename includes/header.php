@@ -34,7 +34,7 @@
 		<?php include 'notification.php'; ?>
 		<div id="container">
 			<header id="header">
-				<img src="<?php echo $image; ?>logo.jpg" class="print" alt="Stag Barbershop" />
+				<img src="/public/img/logo.jpg" class="print" alt="Stag Barbershop" />
 				<h6 id="site-title"><a href="/" title="Home"><?php echo $client ?></a></h6>
 				<nav id="nav">
 					<h6 class="assistive-text">Primary Navigation</h6>
