@@ -27,9 +27,9 @@
 	</div>
 	<div class="flexslider">
 		<ul class="slides reduced">
-			<li><img src="<?= $image ?>slideshow/home-4.jpg<?= $version; ?>" alt="" /></li>
-			<li><img src="<?= $image ?>slideshow/home-1.jpg<?= $version; ?>" alt="" /></li>
-			<li><img src="<?= $image ?>slideshow/home-3.jpg<?= $version; ?>" alt="" /></li>
+			<li><img src="/public/img/slideshow/home-4.jpg" alt="" /></li>
+			<li><img src="/public/img/slideshow/home-1.jpg" alt="" /></li>
+			<li><img src="/public/img/slideshow/home-3.jpg" alt="" /></li>
 		</ul>
 	</div>
 </div>

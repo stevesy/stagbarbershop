@@ -36,8 +36,8 @@
 	</div>
 	<div class="flexslider">
 		<ul class="reduced slides">
-			<li><img src="<?= $image ?>slideshow/products-3.jpg<?= $version; ?>" alt="" /></li>
-			<li><img src="<?= $image ?>slideshow/products-4.jpg<?= $version; ?>" alt="" /></li>
+			<li><img src="/public/img/slideshow/products-3.jpg" alt="" /></li>
+			<li><img src="/public/img/slideshow/products-4.jpg" alt="" /></li>
 		</ul>
 	</div>
 </div>

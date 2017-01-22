@@ -4,7 +4,6 @@
 	$page_title = 'Contact Us';
 	$body_class = 'contact';
 	$canonicalUrl = '/contact';
-	$footerScript = '<script src="'.$script.'jquery.validate.min.js"></script>';
 
 	include 'includes/header.php';
 ?>
@@ -48,7 +47,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col col2"><img src="<?= $image ?>stag-window.jpg" alt="Stag Barbershop Storefront Window" /></div>
+		<div class="col col2"><img src="/public/img/stag-window.jpg" alt="Stag Barbershop Storefront Window" /></div>
 	</div>
 </div>
 

@@ -1,7 +1,7 @@
 <?php
 	$forceDesktop = $_GET{'desktop'};
 	if ($forceDesktop === "1")
-		setcookie("forceDesktop", 1, time()+60*15);
+		setcookie("forceDesktop", 1, time() + 60 * 15);
 ?>
 
 <!DOCTYPE html>
@@ -14,16 +14,19 @@
 			<meta name="robots" content="noindex,nofollow" />
 		<?php } ?>
 		<link rel="shortcut icon" href="/favicon.ico" />
-		<title><?php if ($body_class == "home") echo $client . " | " . $description . " &bull; Milwaukee WI"; else echo $page_title . " | " . $client; ?></title>
+		<title><?php if ($body_class == "home") {
+			echo $client . " | " . $description . " &bull; Milwaukee WI";
+		} else {
+			echo $page_title . " | " . $client;
+		} ?></title>
 		<?php if (isset($canonicalUrl)) { ?>
-			<link rel="canonical" href="http://<?php echo $_SERVER["HTTP_HOST"].$canonicalUrl ?>" />
+			<link rel="canonical" href="http://<?php echo $httpHost.$canonicalUrl ?>" />
 		<?php } ?>
 		<?php if (!empty($page_description)) { ?>
 			<meta name="description" content="<?php echo $page_description ?>" />
 		<?php } ?>
-		<link rel="stylesheet" href="/css/global.css<?php echo $version ?>" />
-		<script src="/scripts/modernizr-2.7.1.min.js"></script>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="/public/css/site.css<?php echo $version ?>" />
+		<script src="/public/js/modernizr.js"></script>
 		<?php include("mobiledetect.php"); ?>
 		<?php include("analytics.php"); ?>
 	</head>
@@ -31,7 +34,7 @@
 		<?php include 'notification.php'; ?>
 		<div id="container">
 			<header id="header">
-				<img src="<?php echo $image; ?>logo.jpg" class="print" alt="Stag Barbershop" width="142" height="211" />
+				<img src="<?php echo $image; ?>logo.jpg" class="print" alt="Stag Barbershop" />
 				<h6 id="site-title"><a href="/" title="Home"><?php echo $client ?></a></h6>
 				<nav id="nav">
 					<h6 class="assistive-text">Primary Navigation</h6>

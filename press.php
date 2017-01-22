@@ -21,10 +21,10 @@
 	<a class="btn" href="https://www.vagaro.com/stagbarbershop#online-scheduling" target="_blank">Book Appointment</a>
 	<div class="flexslider">
 		<ul class="reduced slides">
-			<li><img src="<?= $image ?>slideshow/press-1.jpg<?= $version; ?>" alt="" /></li>
-			<li><img src="<?= $image ?>slideshow/press-2.jpg<?= $version; ?>" alt="" /></li>
-			<li><img src="<?= $image ?>slideshow/press-3.jpg<?= $version; ?>" alt="" /></li>
-			<li><img src="<?= $image ?>slideshow/home-6.gif<?= $version; ?>" alt="" /></li>
+			<li><img src="/public/img/slideshow/press-1.jpg" alt="" /></li>
+			<li><img src="/public/img/slideshow/press-2.jpg" alt="" /></li>
+			<li><img src="/public/img/slideshow/press-3.jpg" alt="" /></li>
+			<li><img src="/public/img/slideshow/home-6.gif" alt="" /></li>
 		</ul>
 	</div>
 </div>

@@ -1,3 +1,6 @@
+const $ = global.jQuery = global.$ = require('jquery');
+require('flexslider');
+
 $(function() {
 	$('.flexslider').flexslider({
 		slideshowSpeed: 3000,
@@ -5,10 +8,10 @@ $(function() {
 		directionNav: false
 	});
 
-	var $tel = $('.tel');
+	const $tel = $('.tel');
 	if ($tel.length > 0) {
-		var $telReplaceElement = $tel.find('.value span');
-		var telReplaceText = $telReplaceElement.text();
+		const $telReplaceElement = $tel.find('.value span');
+		const telReplaceText = $telReplaceElement.text();
 		$tel.hover(function() {
 			$telReplaceElement.text(7824);
 		}, function() {

@@ -10,14 +10,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 		<title>Stag Barbershop &bull; Old School Barbershop for the Modern Man &bull; Milwaukee WI</title>
 		<link rel="shortcut icon" href="/favicon.ico" />
-		<link rel="stylesheet" href="<?= $css ?>mobile.css" />
+		<link rel="stylesheet" href="/public/css/mobile.css" />
 		<?php include("includes/analytics.php"); ?>
 	</head>
 	<body>
 		<?php include 'includes/notification.php'; ?>
 		<div id="container">
 			<header>
-				<img src="<?= $image ?>logo.png" alt="Stag Barbershop" />
+				<img src="/public/img/logo.png" alt="Stag Barbershop" />
 			</header>
 
 			<div id="content">

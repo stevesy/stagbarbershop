@@ -42,7 +42,7 @@
 		</p>
 		<a class="btn" href="https://www.vagaro.com/stagbarbershop#online-scheduling" target="_blank">Book Appointment</a>
 	</div>
-	<a href="http://g.co/maps/qbknr" target="_blank"><img src="<?= $image ?>map.png" id="map" width="370" height="400" /></a>
+	<a href="http://g.co/maps/qbknr" target="_blank"><img src="/public/img/map.png" id="map" /></a>
 </div>
 
 <?php include 'includes/footer.php'; ?>

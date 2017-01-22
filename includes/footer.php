@@ -17,7 +17,6 @@
 				</p>
 			</footer>
 		</div>
-		<script src="/scripts/jquery.flexslider.min.js"></script>
-		<script src="/scripts/global.js<?php echo $version ?>"></script>
+		<script src="/public/js/site.js<?php echo $version ?>"></script>
 	</body>
 </html>

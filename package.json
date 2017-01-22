@@ -1,12 +1,32 @@
 {
-	"name": "stag",
-	"version": "0.1.0",
-	"license": "MIT",
-	"main": "Gruntfile.js",
-	"devDependencies": {
-		"grunt": "~0.4.2",
-		"grunt-contrib-sass": "~0.7.3",
-		"grunt-contrib-jshint": "~0.10.0",
-		"grunt-contrib-watch": "~0.5.3"
-	}
+  "name": "stagbabershop",
+  "version": "1.0.0",
+  "main": "Gruntfile.js",
+  "devDependencies": {
+    "autoprefixer": "^6.5.0",
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "grunt": "^1.0.0",
+    "grunt-browserify": "^5.0.0",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-modernizr": "^1.0.2",
+    "grunt-newer": "^1.2.0",
+    "grunt-postcss": "^0.8.0"
+  },
+  "scripts": {
+    "js": "grunt browserify",
+    "css": "grunt sass && grunt postcss",
+    "imagemin": "grunt newer:imagemin",
+    "build": "grunt modernizr && npm run js && npm run css && npm run imagemin",
+    "release": "grunt modernizr && npm run js && grunt uglify && npm run css && npm run imagemin",
+    "watch": "npm run build && grunt watch"
+  },
+  "dependencies": {
+    "flexslider": "^2.6.3",
+    "jquery": "^3.1.1"
+  }
 }
