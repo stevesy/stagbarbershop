@@ -2,15 +2,15 @@ module.exports = function (grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		srcDir: 'assets/',
-		distDir: 'public/',
+		srcDir: 'website/assets/',
+		distDir: 'website/public/',
 		jsSrc: '<%= srcDir %>scripts/**/*.js',
 
 		modernizr: {
 			dist: {
 				'crawl': false,
 				'customTests': [],
-				'dest': 'public/js/modernizr.js',
+				'dest': 'website/public/js/modernizr.js',
 				'tests': [
 					'touchevents'
 				],
