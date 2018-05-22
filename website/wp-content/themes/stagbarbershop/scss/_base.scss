@@ -1,0 +1,7 @@
+.screen-reader-text {
+	@include sr-only();
+}
+
+.container-fluid {
+	max-width: 1300px;
+}

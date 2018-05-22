@@ -1,65 +1,42 @@
-module.exports = function (grunt) {
-
+module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		srcDir: 'website/assets/',
-		distDir: 'website/public/',
-		jsSrc: '<%= srcDir %>scripts/**/*.js',
-
-		modernizr: {
-			dist: {
-				'crawl': false,
-				'customTests': [],
-				'dest': 'website/public/js/modernizr.js',
-				'tests': [
-					'touchevents'
-				],
-				'options': [
-					'html5shiv',
-					'setClasses'
-				],
-				'uglify': true
-			}
-		},
 
 		browserify: {
-			dist: {
+			site: {
 				options: {
-					transform: [['babelify', { presets: 'es2015' }]],
+					transform: [['babelify', { 
+						presets: 'env'
+					}]],
 					browserifyOptions: {
 						debug: true
-					},
-					exclude: ['jquery'],
-					require: ['jquery']
+					}
 				},
 				files: {
-					'<%= distDir %>js/site.js': '<%= srcDir %>scripts/site.js'
+					'./website/wp-content/themes/stagbarbershop/js/site.js': './website/wp-content/themes/stagbarbershop/js/src/index.js'
 				}
 			}
 		},
 
 		uglify: {
-			my_target: {
+			dist: {
 				options: {
 					sourceMap: true,
 					quoteStyle: 1,
 				},
 				files: {
-					'<%= distDir %>js/site.js': '<%= distDir %>js/site.js'
+					'./website/wp-content/themes/stagbarbershop/js/site.js': './website/wp-content/themes/stagbarbershop/js/site.js'
 				}
 			}
 		},
 
 		sass: {
 			options: {
-				style: 'compressed'
+				sourceMap: true
 			},
 			dist: {
-				expand: true,
-				flatten: true,
 				files: {
-					'<%= distDir %>css/site.css': '<%= srcDir %>styles/site.scss',
-					'<%= distDir %>css/mobile.css': '<%= srcDir %>styles/mobile.scss'
+					'./website/wp-content/themes/stagbarbershop/style.css': './website/wp-content/themes/stagbarbershop/scss/style.scss'
 				}
 			}
 		},
@@ -67,51 +44,60 @@ module.exports = function (grunt) {
 		postcss: {
 			options: {
 				processors: [
-					require('autoprefixer') ({
-						browsers: ['last 2 versions','ie >= 9','chrome 28']
-					})
+					require('autoprefixer')({
+						browsers: ['last 2 versions']
+					}),
+					require('cssnano')
 				]
 			},
 			dist: {
-				src: '<%= distDir %>css/site.css'
-			}
-		},
-
-		imagemin: {
-			dist: {
-				static: {
-					options: {
-						optimizationLevel: 3
-					}
-				},
-				files: [{
-					expand: true,
-					cwd: '<%= srcDir %>images/',
-					src: ['**/*.{png,jpg,gif}'],
-					dest: '<%= distDir %>img/'
-				}]
+				src: './website/wp-content/themes/stagbarbershop/css/style.css'
 			}
 		},
 
 		watch: {
 			css: {
-				files: ['<%= srcDir %>styles/**/*.scss'],
-				tasks: ['sass', 'postcss']
+				files: ['./website/wp-content/themes/stagbarbershop/scss/**/*.scss'],
+				tasks: 'sass'
 			},
 			js: {
-				files: ['Gruntfile.js', '<%= jsSrc %>'],
+				files: ['Gruntfile.js', './website/wp-content/themes/stagbarbershop/js/src/**/*.js'],
 				tasks: 'browserify'
 			}
 		}
-
 	});
 
-	grunt.loadNpmTasks('grunt-modernizr');
+	grunt.registerTask('scripts', [
+		'browserify'
+	]);
+
+	grunt.registerTask('scripts-prod', [
+		'browserify',
+		'uglify'
+	]);
+
+	grunt.registerTask('styles', [
+		'sass'
+	]);
+
+	grunt.registerTask('styles-prod', [
+		'sass',
+		'postcss'
+	]);
+
+	grunt.registerTask('build', [
+		'scripts',
+		'styles'
+	]);
+	
+	grunt.registerTask('build-prod', [
+		'scripts-prod',
+		'styles-prod'
+	]);
+
 	grunt.loadNpmTasks('grunt-browserify');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-postcss');
-	grunt.loadNpmTasks('grunt-contrib-imagemin');
-	grunt.loadNpmTasks('grunt-newer');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 };
