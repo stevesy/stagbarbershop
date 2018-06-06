@@ -29,12 +29,12 @@
 				<div class="container-fluid">
 					<div class="site-branding">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<?php bloginfo( 'name' ); ?>
+							<img src="<?php echo get_template_directory_uri(); ?>/img/logo-stag.svg" alt="<?php bloginfo( 'name' ); ?>" />
 						</a>
 					</div>
 
 					<nav id="site-nav" class="navbar-collapse collapsed">
-						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
+						<button class="menu-toggle d-md-none" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
 							
 						</button>
 						
@@ -43,7 +43,8 @@
 								array(
 									'theme_location' => 'menu-1',
 									'menu_id'        => 'primary-menu',
-									'menu_class'      => 'navbar-nav'
+									'menu_class'     => 'navbar-nav flex-row justify-content-end',
+									'container'      => ''
 								)
 							);
 						?>

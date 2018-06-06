@@ -120,6 +120,7 @@ add_action( 'widgets_init', 'stagbarbershop_widgets_init' );
  * Enqueue scripts and styles.
  */
 function stagbarbershop_scripts() {
+	wp_enqueue_style( 'stagbarbershop-fonts', '//fonts.googleapis.com/css?family=Slabo+27px' );
 	wp_enqueue_style( 'stagbarbershop-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'stagbarbershop-navigation', get_template_directory_uri() . '/js/site.js', array(), '', true );
