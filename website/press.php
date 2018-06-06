@@ -18,7 +18,7 @@
 		<li><a href="http://www.greatermkemen.com/2012/02/heview-stag-barbershop.html" target="_blank">Greater MKE Men</a></li>
 		<li><a href="http://www.urbanmilwaukee.com/2011/11/mark-herro-aka-mantic59-comes-to-stag-and-brings-his-razor" target="_blank">Urban Milwaukee</a></li>
 	</ul>
-	<a class="btn" href="https://www.vagaro.com/stagbarbershop#online-scheduling" target="_blank">Book Appointment</a>
+	<a class="btn" href="https://www.vagaro.com/stagbarbershop/book-now" target="_blank">Book Appointment</a>
 	<div class="flexslider">
 		<ul class="reduced slides">
 			<li><img src="/public/img/slideshow/press-1.jpg" alt="" /></li>

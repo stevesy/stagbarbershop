@@ -13,7 +13,7 @@
 	<div class="row row1">
 		<div class="col col1">
 			<h2>Appointments</h2>
-			<p><a href="https://www.vagaro.com/stagbarbershop#online-scheduling" target="_blank">Book Online</a></p>
+			<p><a href="https://www.vagaro.com/stagbarbershop/book-now" target="_blank">Book Online</a></p>
 		</div>
 		<div class="col col2">
 			<h2>Gift Certificates</h2>

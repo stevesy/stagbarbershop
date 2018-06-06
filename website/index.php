@@ -23,7 +23,7 @@
 				<span class="value">414.489.<span>STAG</span></span>
 			</span>
 		</p>
-		<a class="btn" href="https://www.vagaro.com/stagbarbershop#online-scheduling" target="_blank">Book Appointment</a>
+		<a class="btn" href="https://www.vagaro.com/stagbarbershop/book-now" target="_blank">Book Appointment</a>
 	</div>
 	<div class="flexslider">
 		<ul class="slides reduced">

@@ -64,7 +64,7 @@
 				<h2>Contact</h2>
 				<p><a href="tel:4144897824">414.489.STAG</a></p>
 				<h3>Appointments</h3>
-				<p><a href="https://www.vagaro.com/stagbarbershop#online-scheduling" target="_blank">Book Online</a></p>
+				<p><a href="https://www.vagaro.com/stagbarbershop/book-now" target="_blank">Book Online</a></p>
 
 				<h3>General Inquiries</h3>
 				<p><a href="mailto:info@stagbarbershop.com">info@stagbarbershop.com</a></p>

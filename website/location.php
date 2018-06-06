@@ -40,7 +40,7 @@
 			</span><br />
 			<a href="http://g.co/maps/qbknr" target="_blank">Get Directions</a>
 		</p>
-		<a class="btn" href="https://www.vagaro.com/stagbarbershop#online-scheduling" target="_blank">Book Appointment</a>
+		<a class="btn" href="https://www.vagaro.com/stagbarbershop/book-now" target="_blank">Book Appointment</a>
 	</div>
 	<a href="http://g.co/maps/qbknr" target="_blank"><img src="/public/img/map.png" id="map" /></a>
 </div>

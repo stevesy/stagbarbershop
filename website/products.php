@@ -12,14 +12,12 @@
 	<h1 id="page-title"><?= $page_title; ?></h1>
 	<div class="section">
 		<ul class="reduced product-list">
-			<li>Bison Made</li>
-			<li>Crown Shaving Company</li>
-			<li>Firehouse Moustache Wax</li>
-			<li>Grant&rsquo;s Golden Brand Pomade</li>
-			<li>Hudson Made New York</li>
+			<li>Crown Shaving</li>
+			<li>Grant&rsquo;s Golden Brand</li>
+			<li>Iron Society</li>
 			<li>Lock Stock &amp; Barrel Grooming</li>
-			<li>Stag Barbershop Beard Oil</li>
-			<li>Stolen Riches</li>
+			<li>Stag Barbershop Grooming Goods</li>
+			<li>Tip Top</li>
 		</ul>
 	</div>
 	<div class="hr"><hr /></div>
@@ -32,12 +30,13 @@
 				<span class="value">414.489.<span>STAG</span></span>
 			</span>
 		</p>
-		<a class="btn" href="https://www.vagaro.com/stagbarbershop#online-scheduling" target="_blank">Book Appointment</a>
+		<a class="btn" href="https://www.vagaro.com/stagbarbershop/book-now" target="_blank">Book Appointment</a>
 	</div>
 	<div class="flexslider">
 		<ul class="reduced slides">
+			<li><img src="/public/img/slideshow/products-1.jpg" alt="" /></li>
+			<li><img src="/public/img/slideshow/products-2.jpg" alt="" /></li>
 			<li><img src="/public/img/slideshow/products-3.jpg" alt="" /></li>
-			<li><img src="/public/img/slideshow/products-4.jpg" alt="" /></li>
 		</ul>
 	</div>
 </div>
