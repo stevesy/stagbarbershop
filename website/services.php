@@ -28,9 +28,8 @@
 	<div class="flexslider">
 		<ul class="reduced slides"> 
 			<li><img src="/public/img/slideshow/services-1.jpg" alt=""/></li>
-			<li><img src="/public/img/slideshow/services-5.jpg" alt="" /></li>
-			<li><img src="/public/img/slideshow/services-4.jpg" alt="" /></li>
-			<li><img src="/public/img/slideshow/services-6.jpg" alt="" /></li>
+			<li><img src="/public/img/slideshow/services-2.jpg" alt="" /></li>
+			<li><img src="/public/img/slideshow/services-3.jpg" alt="" /></li>
 		</ul>
 	</div>
 </div>
