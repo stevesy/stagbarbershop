@@ -1,3 +1,4 @@
 node_modules
 .sass-cache
 website/wp-content/plugins/*
+!website/wp-content/plugins/advanced-custom-fields
