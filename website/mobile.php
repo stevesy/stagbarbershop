@@ -31,24 +31,12 @@
 
 				<div class="hr"><hr /></div>
 
-				<?php if (date('Ymd') <= 20151227) { ?>
-					<h2>Holday Hours</h2>
-					<p>
-						Monday, Dec. 21 &nbsp;&nbsp; 12pm-8pm<br />
-						Tuesday, Dec. 22 &nbsp;&nbsp; 10am-8pm<br />
-						Wednesday, Dec. 23 &nbsp;&nbsp; 10am-7pm<br />
-						Thursday, Dec. 24 &nbsp;&nbsp; 9am-2pm
-					</p>
-					Stag Barbershop will be CLOSED<br /> Friday, Dec. 25 &ndash; Monday, Dec. 28.<br /> Happy Holidays!
-				<?php } else { ?>
-					<h2>Hours</h2>
-					<p>
-						Tuesday &amp; Thursday &nbsp;&nbsp; 10am-8pm<br />
-						Wednesday &amp; Friday &nbsp;&nbsp; 10am-7pm<br />
-						Saturday &nbsp;&nbsp; 9am-3pm<br />
-						Sunday &amp; Monday &nbsp;&nbsp; Closed
-					</p>
-				<?php } ?>
+				<h2>Hours</h2>
+				<p>
+					Tuesday &ndash; Friday &nbsp;&nbsp; 10am&ndash;7pm<br />
+					Saturday &nbsp;&nbsp; 9am&ndash;3pm<br />
+					Sunday &amp; Monday &nbsp;&nbsp; Closed
+				</p>
 
 				<div class="hr"><hr /></div>
 

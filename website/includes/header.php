@@ -31,6 +31,7 @@
 		<?php include("analytics.php"); ?>
 	</head>
 	<body class="<?php echo $body_class ?>">
+		<a class="assistive-text" href="#content">Skip to content</a>
 		<?php include 'notification.php'; ?>
 		<div id="container">
 			<header id="header">
@@ -38,12 +39,10 @@
 				<h6 id="site-title"><a href="/" title="Home"><?php echo $client ?></a></h6>
 				<nav id="nav">
 					<h6 class="assistive-text">Primary Navigation</h6>
-					<a class="assistive-text" href="#content">Skip to content</a>
 					<ul>
-						<li id="menu-item-home"><a href="/">Home</a></li>
+						<?php /* <li id="menu-item-home"><a href="/">Home</a></li> */ ?>
 						<li id="menu-item-services"><a href="/services">Barber Services</a></li>
 						<li id="menu-item-products"><a href="/products">Products</a></li>
-						<li id="menu-item-press"><a href="/press">Press</a></li>
 						<li id="menu-item-location"><a href="/location">Hours &amp; Location</a></li>
 						<li id="menu-item-contact"><a href="/contact">Contact</a></li>
 					</ul>

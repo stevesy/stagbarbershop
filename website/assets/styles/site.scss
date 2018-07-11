@@ -169,21 +169,19 @@ li {
 	text-transform: uppercase;
 
 	ul {
+		display: flex;
 		position: relative;
 		margin: 0 auto;
 		padding: 0;
 		height: 25px;
 
 		li {
-			position: absolute;
-			top: 6px;
-			margin: 0;
+			margin: 0 0 0 35px;
 			padding: 0;
 			font-size: 15px;
 			line-height: 1;
 
 			&.on {
-
 				a {
 					color: #630c00;
 				}
@@ -191,8 +189,11 @@ li {
 		}
 
 		a {
+			display: block;
 			text-decoration: none;
 			color: #000;
+			line-height: 25px;
+			padding: 0 5px;
 
 			&:hover {
 				color: #630c00;
@@ -202,10 +203,7 @@ li {
 }
 
 #menu-item-home {
-	left: 5px;
-
 	a {
-
 		.home & {
 			color: #630c00;
 		}
@@ -213,10 +211,7 @@ li {
 }
 
 #menu-item-services {
-	left: 80px;
-
 	a {
-
 		.services & {
 			color: #630c00;
 		}
@@ -224,32 +219,17 @@ li {
 }
 
 #menu-item-products {
-	left: 229px;
-
 	a {
-
 		.products & {
 			color: #630c00;
 		}
 	}
 }
 
-#menu-item-press {
-	right: 254px;
-
-	a {
-
-		.press & {
-			color: #630c00;
-		}
-	}
-}
-
 #menu-item-location {
-	right: 97px;
+	margin-left: 210px !important;
 
 	a {
-
 		.location & {
 			color: #630c00;
 		}
@@ -257,10 +237,7 @@ li {
 }
 
 #menu-item-contact {
-	right: 5px;
-
 	a {
-
 		.contact & {
 			color: #630c00;
 		}
@@ -329,7 +306,7 @@ li {
 
 #footer {
 	color: #666;
-} 
+}
 
 #footer {
 	position: relative;
@@ -595,27 +572,27 @@ fieldset.super ol {
 	#site-title {
 		display: none;
 	}
-	
+
 	.print,
 	.hr hr {
 		display: block !important;
 	}
-	
+
 	#header img {
 		margin: 0 auto;
 	}
-	
+
 	#container {
 		margin-top: 0;
 		box-shadow: none;
 	}
-	
+
 	#main {
 		border-right-color: #fff;
 		border-left-color: #fff;
 		margin-top: -22px;
 	}
-	
+
 	.hr {
 		margin: 0;
 	}
