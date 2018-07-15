@@ -13,8 +13,8 @@
 
 		</div>
 
-		<footer id="colophon" class="site-footer pb-3">
-			<div class="bg-dark text-light">
+		<footer id="colophon" class="site-footer">
+			<div class="footer-top bg-dark text-light">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-md-4 col-lg-6 pt-4">
@@ -43,26 +43,28 @@
 					</div>
 				</div>
 			</div>
-			<div class="container-fluid mb-3">
-				<div class="row">
-					<div class="col-md-6 text-center text-md-left mt-3">
-						&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>
-					</div>
-					<div class="col-md-6 mt-3">
-						<ul class="social list-unstyled d-flex justify-content-center justify-content-md-end mb-0">
-							<li class="mx-2">
-								<a href="https://www.facebook.com/stagbarbershop" target="_blank" rel="noopener">
-									<span class="fab fa-facebook fa-2x"></span>
-									<span class="sr-only">Stag Barbershop on Facebook</span>
-								</a>
-							</li>
-							<li class="mx-2 mr-md-0">
-								<a href="https://www.instagram.com/stagbarbershop" target="_blank" rel="noopener">
-									<span class="fab fa-instagram fa-2x"></span>
-									<span class="sr-only">Stag Barbershop on Instagram</span>
-								</a>
-							</li>
-						</ul>
+			<div class="footer-bottom bg-white pb-3">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-6 text-center text-md-left mt-3">
+							&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>
+						</div>
+						<div class="col-md-6 mt-3">
+							<ul class="social list-unstyled d-flex justify-content-center justify-content-md-end mb-0">
+								<li class="mx-2">
+									<a href="https://www.facebook.com/stagbarbershop" target="_blank" rel="noopener">
+										<span class="fab fa-facebook fa-2x"></span>
+										<span class="sr-only">Stag Barbershop on Facebook</span>
+									</a>
+								</li>
+								<li class="mx-2 mr-md-0">
+									<a href="https://www.instagram.com/stagbarbershop" target="_blank" rel="noopener">
+										<span class="fab fa-instagram fa-2x"></span>
+										<span class="sr-only">Stag Barbershop on Instagram</span>
+									</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>

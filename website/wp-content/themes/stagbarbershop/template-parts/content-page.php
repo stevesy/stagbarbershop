@@ -11,22 +11,13 @@
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="page-header">
-		<div class="container-fluid">
-			<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
-		</div>
 		<?php stagbarbershop_post_thumbnail(); ?>
+		<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
 	</header>
 
 	<div class="page-content">
 		<div class="container-fluid">
-			<?php
-			the_content();
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'stagbarbershop' ),
-				'after'  => '</div>',
-			) );
-			?>
+			<?php the_content(); ?>
 		</div>
 	</div>
 </div>
