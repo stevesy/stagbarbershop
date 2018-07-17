@@ -1,0 +1,9 @@
+.page-services {
+	.page-content {
+		.small {
+			@include media-breakpoint-up(md) {
+				font-size: 70%;
+			}
+		}
+	}
+}

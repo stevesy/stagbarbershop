@@ -70,3 +70,22 @@ function clean_script_tags($input) {
 	return str_replace("'", '"', $input);
 }
 add_filter( 'script_loader_tag', 'clean_script_tags' );
+
+/**
+ * Remove site search
+ */
+function wpb_filter_query( $query, $error = true ) {
+	if ( is_search() ) {
+		$query->is_search = false;
+		// $query->query_vars[s] = false;
+		// $query->query[s] = false;
+		if ( $error == true )
+			$query->is_404 = true;
+	}
+}
+add_action( 'parse_query', 'wpb_filter_query' );
+add_filter( 'get_search_form', function ( $a ) { return null; } );
+function remove_search_widget() {
+	unregister_widget('WP_Widget_Search');
+}
+add_action( 'widgets_init', 'remove_search_widget' );

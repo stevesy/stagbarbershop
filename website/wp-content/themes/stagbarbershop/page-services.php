@@ -16,45 +16,21 @@
 
 						<div class="page-content">
 							<div class="container-fluid">
-								<ul class="list-unstyled">
-									<li class="d-flex justify-content-between">
-										<span><?php echo get_field( 'service_name_1' ); ?></span>
-										<span>$<?php echo get_field( 'service_price_1' ); ?></span>
-									</li>
-									<li class="d-flex justify-content-between">
-										<span><?php echo get_field( 'service_name_2' ); ?></span>
-										<span>$<?php echo get_field( 'service_price_2' ); ?></span>
-									</li>
-									<li class="d-flex justify-content-between">
-										<span>Men&rsquo;s Haircut &amp; Shave</span>
-										<span>$60</span>
-									</li>
-									<li class="d-flex justify-content-between">
-										<span>Hot Lather Head Shave</span>
-										<span>$30</span>
-									</li>
-									<li class="d-flex justify-content-between">
-										<span>Buzz Cut</span>
-										<span>$20</span>
-									</li>
-									<li class="d-flex justify-content-between">
-										<span>Beard Trim</span>
-										<span>$15</span>
-									</li>
-									<li class="d-flex justify-content-between">
-										<span>Mustache Trim</span>
-										<span>$5</span>
-									</li>
-									<li class="d-flex justify-content-between">
-										<span>Shoe Shine</span>
-										<span>$17</span>
-									</li>
+								<ul class="list-unstyled mb-4 mb-md-5">
+									<?php for ($i = 1; $i <= 10; $i++) : ?>
+										<?php if ( !empty( get_field( 'service_' . $i ) ) && !empty( get_field( 'price_' . $i ) ) ) : ?>
+											<li class="d-flex justify-content-between">
+												<span><?php echo get_field( 'service_' . $i ); ?></span>
+												<span>$<?php echo get_field( 'price_' . $i ); ?></span>
+											</li>
+										<?php endif; ?>
+									<?php endfor; ?>
 								</ul>
 
-								<p class="small text-center">By appointment only.</p>
+								<p class="small text-center mb-0">By appointment only.</p>
 
 								<p class="text-center">
-									<a class="btn btn-primary" href="https://www.vagaro.com/stagbarbershop/book-now" target="_blank" rel="noopener">Book Appointment</a>
+									<a class="btn btn-primary" href="https://www.vagaro.com/stagbarbershop/book-now" target="_blank" rel="noopener">Book Now</a>
 								</p>
 							</div>
 						</div>

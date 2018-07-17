@@ -18,7 +18,7 @@
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-md-4 col-lg-6 pt-4">
-							<div class="address-hours mx-auto">
+							<div class="address-hours mx-auto text-center text-md-left">
 								<div class="row">
 									<div class="col-lg-6 mb-4">
 										<h2 class="h5 text-uppercase mb-0">Stag Barbershop</h2>

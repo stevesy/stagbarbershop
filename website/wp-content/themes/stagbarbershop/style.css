@@ -5407,7 +5407,9 @@ a.text-dark:hover, a.text-dark:focus {
   border: 0; }
 
 .btn {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  min-width: 12.5rem; }
 
 .navbar {
   position: absolute;
@@ -5435,7 +5437,7 @@ a.text-dark:hover, a.text-dark:focus {
 .navbar-collapse {
   flex-basis: auto;
   display: none; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .navbar-collapse {
       display: block; } }
 
@@ -5475,12 +5477,16 @@ a.text-dark:hover, a.text-dark:focus {
 
 .page-header {
   position: relative;
-  height: 75vh;
-  min-height: 400px;
-  background-color: #000;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  min-height: 400px;
+  padding-top: 100px;
+  background-color: #000; }
+  @media (min-width: 768px) {
+    .page-header {
+      height: 75vh;
+      padding-top: 0; } }
   .page-header .post-thumbnail {
     position: fixed;
     top: 0;
@@ -5500,20 +5506,35 @@ a.text-dark:hover, a.text-dark:focus {
     margin-bottom: 0; }
     @media (min-width: 768px) {
       .page-header .page-title {
+        font-size: 3rem; } }
+    @media (min-width: 992px) {
+      .page-header .page-title {
         font-size: 5vw; } }
 
 .page-content {
   position: relative;
   z-index: 9;
   font-size: 1.25rem;
-  padding: 5rem 0;
+  padding: 2.5rem 0;
   background-color: #fff; }
   @media (min-width: 768px) {
     .page-content {
+      padding: 5rem 0;
       font-size: 2rem; } }
   .page-content .container-fluid {
     max-width: 1000px; }
   .page-content p:last-child {
     margin-bottom: 0; }
+  .page-content .btn {
+    margin: 1rem 1rem 0; }
+    @media (max-width: 767.98px) {
+      .page-content .btn {
+        display: block;
+        width: 100%;
+        margin: 1rem 0 0; } }
+
+@media (min-width: 768px) {
+  .page-services .page-content .small {
+    font-size: 70%; } }
 
 /*# sourceMappingURL=style.css.map */
