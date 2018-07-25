@@ -17,21 +17,20 @@
 						<div class="page-content">
 							<div class="container-fluid">
 								<ul class="list-unstyled mb-4 mb-md-5">
-									<?php for ($i = 1; $i <= 10; $i++) : ?>
-										<?php if ( !empty( get_field( 'service_' . $i ) ) && !empty( get_field( 'price_' . $i ) ) ) : ?>
+									<?php if ( have_rows( 'services' ) ) : ?>
+										<?php while ( have_rows( 'services' ) ) : the_row(); ?>
 											<li class="d-flex justify-content-between">
-												<span><?php echo get_field( 'service_' . $i ); ?></span>
-												<span>$<?php echo get_field( 'price_' . $i ); ?></span>
+												<span><?php echo get_sub_field( 'name' ); ?></span>
+												<span>$<?php echo get_sub_field( 'price' ); ?></span>
 											</li>
-										<?php endif; ?>
-									<?php endfor; ?>
+										<?php endwhile; ?>
+									<?php endif; ?>
 								</ul>
-
-								<p class="small text-center mb-0">By appointment only.</p>
 
 								<p class="text-center">
 									<a class="btn btn-primary" href="https://www.vagaro.com/stagbarbershop/book-now" target="_blank" rel="noopener">Book Now</a>
 								</p>
+								<p class="small text-center">By appointment only. We do not accept appointments or cancellations via email.</p>
 							</div>
 						</div>
 					</div>

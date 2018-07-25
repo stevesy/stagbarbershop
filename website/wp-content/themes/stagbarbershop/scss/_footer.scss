@@ -1,13 +1,23 @@
 .site-footer {
 	position: relative;
 	z-index: 9;
+
+	.logo {
+		display: block;
+		height: 125px;
+		margin: 0 auto 1rem;
+
+		@include media-breakpoint-up(md) {
+			height: 150px;
+		}
+	}
 	
 	a {
 		color: inherit;
 	}
 
 	.address-hours {
-		// max-width: 40em;
+		max-width: 30em;
 	}
 
 	.map {

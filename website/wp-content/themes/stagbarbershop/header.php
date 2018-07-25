@@ -43,7 +43,7 @@
 								array(
 									'theme_location' => 'menu-1',
 									'menu_id'        => 'primary-menu',
-									'menu_class'     => 'navbar-nav flex-row justify-content-end',
+									'menu_class'     => 'navbar-nav flex-row justify-content-center text-center',
 									'container'      => ''
 								)
 							);

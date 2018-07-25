@@ -15,19 +15,26 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			
-			<?php
-				while ( have_posts() ) :
-					the_post();
+			<?php while ( have_posts() ) : the_post(); ?>
 
-					get_template_part( 'template-parts/content', 'page' );
+				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<header class="page-header">
+						<?php stagbarbershop_post_thumbnail(); ?>
+						<div class="position-relative text-center">
+							<?php the_title( '<h1 class="page-title mb-3">', '</h1>' ); ?>
+							<a class="btn btn-primary" href="https://www.vagaro.com/stagbarbershop/book-now" target="_blank" rel="noopener">Book Now</a>
+						</div>
+					</header>
 
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
+					<div class="page-content text-center">
+						<div class="container-fluid">
+							<?php the_content(); ?>
+							<p><a class="btn btn-primary" href="/services">Barber Services</a></p>
+						</div>
+					</div>
+				</div>
 
-				endwhile; // End of the loop.
-			?>
+			<?php endwhile; ?>
 
 		</main>
 	</div>
