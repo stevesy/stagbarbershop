@@ -18,6 +18,15 @@
 
 	.address-hours {
 		max-width: 30em;
+
+		@include media-breakpoint-up(md) {
+			font-size: 1.25rem;
+		}
+
+		h2,
+		h3 {
+			font-size: 1.25em;
+		}
 	}
 
 	.map {

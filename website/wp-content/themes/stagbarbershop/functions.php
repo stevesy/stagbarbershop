@@ -121,10 +121,12 @@ add_action( 'widgets_init', 'stagbarbershop_widgets_init' );
  */
 function stagbarbershop_scripts() {
 	wp_enqueue_style( 'fontawesome', '//use.fontawesome.com/releases/v5.1.0/css/all.css' );
-	wp_enqueue_style( 'stagbarbershop-fonts', '//fonts.googleapis.com/css?family=Slabo+27px' );
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Slabo+27px' );
+	wp_enqueue_style( 'tiny-slider-css', '//unpkg.com/tiny-slider@2.8.2/dist/tiny-slider.css' );
 	wp_enqueue_style( 'stagbarbershop-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'stagbarbershop-navigation', get_template_directory_uri() . '/js/site.js', array(), '', true );
+	wp_enqueue_script( 'tiny-slider-js', '//unpkg.com/tiny-slider@2.8.2/dist/min/tiny-slider.js', '', '', true );
+	wp_enqueue_script( 'stagbarbershop-navigation', get_template_directory_uri() . '/js/site.js', '', '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

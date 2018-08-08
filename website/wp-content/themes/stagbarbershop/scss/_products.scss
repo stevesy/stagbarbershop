@@ -1,0 +1,58 @@
+.page-products {
+	.page-content {
+		@include media-breakpoint-up(md) {
+			min-height: 40vw;
+		}
+
+		.container-fluid {
+			max-width: none;
+		}
+
+		.col-md-6 {
+			@include media-breakpoint-up(md) {
+				padding: 0 5%;
+			}
+		}
+	}
+
+	.intro-text {
+		@include media-breakpoint-up(md) {
+			font-size: 0.75em;
+		}
+	}
+}
+
+.slider-wrapper {
+	position: relative;
+	height: 100vw;
+	margin: 2.5rem 0 -2.5rem;
+	overflow: hidden;
+
+	@include media-breakpoint-up(md) {
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 50%;
+		bottom: 0;
+		height: auto;
+		margin: 0;
+	}
+}
+
+.slider {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	.tns-item {
+		height: 100%;
+	}
+
+	img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+}

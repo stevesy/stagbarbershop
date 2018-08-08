@@ -17,17 +17,18 @@
 			<div class="footer-top bg-dark text-light">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-md-4 col-lg-6 pt-4">
-							<div class="address-hours mx-auto text-center text-md-left">
+						<div class="col-md-5 col-lg-6 pt-4 d-flex align-items-center justify-content-center">
+							<div class="address-hours w-100 mx-auto text-center text-md-left">
 								<div class="row">
 									<div class="col-lg-6 mb-4">
-										<h2 class="h5 text-uppercase mb-0">Stag Barbershop</h2>
+										<h2 class="text-uppercase mb-1">Stag Barbershop</h2>
 										3064 South Delaware Avenue<br />
 										Milwaukee, WI 53207<br />
-										<a href="tel:4144897824">414.489.STAG</a>
+										<a href="tel:4144897824">414.489.STAG</a><br />
+										<a href="https://www.google.com/maps?saddr=My+Location&daddr=3064 S+Delaware+Ave+Milwaukee+WI+53207" target="_blank" rel="noopener"><u>Get Directions</u></a>
 									</div>
 									<div class="col-lg-6 mb-4">
-										<h3 class="h5 text-uppercase mb-0">Hours</h3>
+										<h3 class="text-uppercase mb-1">Hours</h3>
 										Tue &ndash; Fri: 10am&dash;7pm<br />
 										Sat: 9am&ndash;3pm<br />
 										Sun & Mon: Closed
@@ -35,7 +36,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-8 col-lg-6">
+						<div class="col-md-7 col-lg-6">
 							<div class="map">
 								<img src="//placehold.it/900x400" alt="map" />
 							</div>

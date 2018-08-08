@@ -3,10 +3,7 @@
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			
-			<?php
-				while ( have_posts() ) :
-					the_post();
-			?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
 					<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<header class="page-header">
@@ -35,9 +32,7 @@
 						</div>
 					</div>
 
-			<?php
-				endwhile; // End of the loop.
-			?>
+			<?php endwhile; ?>
 
 		</main>
 	</div>

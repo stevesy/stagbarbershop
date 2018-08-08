@@ -5482,6 +5482,12 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit; }
   .site-footer .address-hours {
     max-width: 30em; }
+    @media (min-width: 768px) {
+      .site-footer .address-hours {
+        font-size: 1.25rem; } }
+    .site-footer .address-hours h2,
+    .site-footer .address-hours h3 {
+      font-size: 1.25em; }
   .site-footer .map {
     height: 400px;
     margin: 0 -15px; }
@@ -5489,9 +5495,6 @@ a.text-dark:hover, a.text-dark:focus {
       width: 100%;
       height: 100%;
       object-fit: cover; }
-
-.site-content {
-  min-height: 200px; }
 
 .page-header {
   position: relative;
@@ -5549,9 +5552,51 @@ a.text-dark:hover, a.text-dark:focus {
         display: block;
         width: 100%;
         margin: 1rem 0 0; } }
+  @media (min-width: 768px) {
+    .page-content .small {
+      font-size: 70%; } }
 
 @media (min-width: 768px) {
-  .page-services .page-content .small {
-    font-size: 70%; } }
+  .page-products .page-content {
+    min-height: 40vw; } }
+
+.page-products .page-content .container-fluid {
+  max-width: none; }
+
+@media (min-width: 768px) {
+  .page-products .page-content .col-md-6 {
+    padding: 0 5%; } }
+
+@media (min-width: 768px) {
+  .page-products .intro-text {
+    font-size: 0.75em; } }
+
+.slider-wrapper {
+  position: relative;
+  height: 100vw;
+  margin: 2.5rem 0 -2.5rem;
+  overflow: hidden; }
+  @media (min-width: 768px) {
+    .slider-wrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 50%;
+      bottom: 0;
+      height: auto;
+      margin: 0; } }
+
+.slider {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+  .slider .tns-item {
+    height: 100%; }
+  .slider img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
 
 /*# sourceMappingURL=style.css.map */
