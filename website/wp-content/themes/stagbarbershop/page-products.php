@@ -18,7 +18,7 @@
 										<p class="intro-text mb-4 text-center">
 											<?php echo get_field( 'intro_text' ); ?>
 										</p>
-										<ul class="list-unstyled mb-0 text-center">
+										<ul class="products-list list-unstyled mb-0 text-center">
 											<?php if ( have_rows( 'products' ) ) : ?>
 												<?php while ( have_rows( 'products' ) ) : the_row(); ?>
 													<li>

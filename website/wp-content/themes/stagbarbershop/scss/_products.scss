@@ -14,11 +14,13 @@
 			}
 		}
 	}
+}
 
-	.intro-text {
-		@include media-breakpoint-up(md) {
-			font-size: 0.75em;
-		}
+.products-list {
+	font-size: 1.5rem;
+
+	@include media-breakpoint-up(lg) {
+		font-size: 2rem;
 	}
 }
 
@@ -36,6 +38,10 @@
 		bottom: 0;
 		height: auto;
 		margin: 0;
+	}
+
+	[data-action="stop"] {
+		display: none;
 	}
 }
 

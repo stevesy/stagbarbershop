@@ -1,0 +1,13 @@
+.page-services {
+	.page-content {
+		@include media-breakpoint-up(md) {
+			font-size: 2rem;
+		}
+
+		.small {
+			@include media-breakpoint-up(md) {
+				font-size: 0.6em;
+			}
+		}
+	}
+}

@@ -316,8 +316,8 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 500;
+  font-family: Oswald, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 700;
   line-height: 1.2;
   color: inherit; }
 
@@ -5407,6 +5407,8 @@ a.text-dark:hover, a.text-dark:focus {
   border: 0; }
 
 .btn {
+  font-family: Oswald, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 1.25rem;
   min-width: 12.5rem; }
@@ -5480,17 +5482,27 @@ a.text-dark:hover, a.text-dark:focus {
         height: 150px; } }
   .site-footer a {
     color: inherit; }
-  .site-footer .address-hours {
-    max-width: 30em; }
-    @media (min-width: 768px) {
-      .site-footer .address-hours {
-        font-size: 1.25rem; } }
-    .site-footer .address-hours h2,
-    .site-footer .address-hours h3 {
-      font-size: 1.25em; }
+  @media (min-width: 768px) {
+    .site-footer .footer-location {
+      font-size: 1.25rem;
+      max-width: 12em; } }
+  @media (min-width: 992px) {
+    .site-footer .footer-location {
+      max-width: none; } }
+  .site-footer .footer-location h2,
+  .site-footer .footer-location h3 {
+    font-size: 1.25em; }
+  .site-footer .footer-location .social {
+    font-size: 1.5rem; }
   .site-footer .map {
-    height: 400px;
+    height: 300px;
     margin: 0 -15px; }
+    @media (min-width: 768px) {
+      .site-footer .map {
+        height: 500px; } }
+    @media (min-width: 992px) {
+      .site-footer .map {
+        height: 400px; } }
     .site-footer .map img {
       width: 100%;
       height: 100%;
@@ -5505,6 +5517,9 @@ a.text-dark:hover, a.text-dark:focus {
   padding-top: 100px;
   background-color: #000; }
   @media (min-width: 768px) {
+    .page-header {
+      height: 50vh; } }
+  @media (min-width: 992px) {
     .page-header {
       height: 75vh; } }
   .page-header .post-thumbnail {
@@ -5526,10 +5541,13 @@ a.text-dark:hover, a.text-dark:focus {
     margin-bottom: 0; }
     @media (min-width: 768px) {
       .page-header .page-title {
-        font-size: 3rem; } }
+        font-size: 10vw; } }
     @media (min-width: 992px) {
       .page-header .page-title {
-        font-size: 5vw; } }
+        font-size: 8vw; } }
+    @media (min-width: 1200px) {
+      .page-header .page-title {
+        font-size: 6vw; } }
 
 .page-content {
   position: relative;
@@ -5539,8 +5557,7 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: #fff; }
   @media (min-width: 768px) {
     .page-content {
-      padding: 5rem 0;
-      font-size: 2rem; } }
+      padding: 5rem 0; } }
   .page-content .container-fluid {
     max-width: 1000px; }
   .page-content p:last-child {
@@ -5552,9 +5569,14 @@ a.text-dark:hover, a.text-dark:focus {
         display: block;
         width: 100%;
         margin: 1rem 0 0; } }
-  @media (min-width: 768px) {
-    .page-content .small {
-      font-size: 70%; } }
+
+@media (min-width: 768px) {
+  .page-services .page-content {
+    font-size: 2rem; } }
+
+@media (min-width: 768px) {
+  .page-services .page-content .small {
+    font-size: 0.6em; } }
 
 @media (min-width: 768px) {
   .page-products .page-content {
@@ -5567,9 +5589,11 @@ a.text-dark:hover, a.text-dark:focus {
   .page-products .page-content .col-md-6 {
     padding: 0 5%; } }
 
-@media (min-width: 768px) {
-  .page-products .intro-text {
-    font-size: 0.75em; } }
+.products-list {
+  font-size: 1.5rem; }
+  @media (min-width: 992px) {
+    .products-list {
+      font-size: 2rem; } }
 
 .slider-wrapper {
   position: relative;
@@ -5585,6 +5609,8 @@ a.text-dark:hover, a.text-dark:focus {
       bottom: 0;
       height: auto;
       margin: 0; } }
+  .slider-wrapper [data-action="stop"] {
+    display: none; }
 
 .slider {
   position: absolute;
