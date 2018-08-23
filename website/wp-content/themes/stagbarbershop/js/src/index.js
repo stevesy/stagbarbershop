@@ -1,3 +1,11 @@
+const menuToggle = document.getElementById('menu-toggle');
+const nav = document.getElementById('site-nav');
+menuToggle.addEventListener('click', e => {
+	e.preventDefault();
+	menuToggle.classList.toggle('collapsed');
+	nav.classList.toggle('collapsed');
+});
+
 const postThumbnail = document.getElementsByClassName('post-thumbnail')[0];
 if (postThumbnail) {
 	global.addEventListener('scroll', () => {

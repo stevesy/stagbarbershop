@@ -33,21 +33,31 @@
 						</a>
 					</div>
 
+					<button id="menu-toggle" class="menu-toggle collapsed d-md-none" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="hamburger">
+							<span></span>
+							<span></span>
+							<span></span>
+						</span>
+					</button>
+
 					<nav id="site-nav" class="navbar-collapse collapsed">
-						<button class="menu-toggle d-md-none" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
-							
-						</button>
-						
 						<?php
 							wp_nav_menu(
 								array(
 									'theme_location' => 'menu-1',
 									'menu_id'        => 'primary-menu',
-									'menu_class'     => 'navbar-nav flex-row justify-content-center text-center',
+									'menu_class'     => 'navbar-nav flex-md-row justify-content-md-center text-center',
 									'container'      => ''
 								)
 							);
 						?>
+
+						<div class="navbar-address text-center d-md-none">
+							3064 South Delaware Avenue<br />
+							Milwaukee, WI 53207<br />
+							<a href="tel:4144897824">414.489.STAG</a> 
+						</div>
 					</nav>
 				</div>
 			</header>

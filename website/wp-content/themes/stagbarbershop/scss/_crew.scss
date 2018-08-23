@@ -1,0 +1,16 @@
+.list-crew {
+	margin-bottom: -2rem;
+}
+
+.item-crew {
+	margin-bottom: 2rem;
+
+	a {
+		color: inherit;
+
+		&:hover {
+			color: $primary;
+			text-decoration: none;
+		}
+	}
+}
