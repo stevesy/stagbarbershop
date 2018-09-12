@@ -113,6 +113,16 @@ function stagbarbershop_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Sidebar', 'stagbarbershop' ),
+		'id'            => 'footer-sidebar-1',
+		'description'   => esc_html__( 'Add widgets here.', 'stagbarbershop' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s pl-lg-4 pb-4">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title text-uppercase mb-1">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'stagbarbershop_widgets_init' );
 

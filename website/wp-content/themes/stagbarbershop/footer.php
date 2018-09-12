@@ -25,7 +25,12 @@
 						<div class="col-md-6 d-flex align-items-center justify-content-center">
 							<div class="footer-location w-100 mx-auto text-center text-md-left">
 								<div class="d-lg-flex flex-wrap flex-xl-nowrap justify-content-between justify-content-xl-around pt-4 pr-lg-4">
-									<div class="pl-lg-4 pb-4">
+									<?php
+										if ( is_active_sidebar( 'footer-sidebar-1' ) ) {
+											dynamic_sidebar( 'footer-sidebar-1' );
+										}
+									?>
+									<?php /* <div class="pl-lg-4 pb-4">
 										<h2 class="text-uppercase mb-1">Location</h2>
 										3064 South Delaware Avenue<br />
 										Milwaukee, WI 53207<br />
@@ -47,18 +52,18 @@
 										<ul class="social list-unstyled d-flex justify-content-center justify-content-md-start mb-0">
 											<li>
 												<a href="https://www.instagram.com/stagbarbershop" target="_blank" rel="noopener">
-													<span class="fab fa-instagram"></span>
+													<span class="fab fa-instagram" aria-hidden="true"></span>
 													<span class="sr-only">Stag Barbershop on Instagram</span>
 												</a>
 											</li>
 											<li class="ml-3">
 												<a href="https://www.facebook.com/stagbarbershop" target="_blank" rel="noopener">
-													<span class="fab fa-facebook"></span>
+													<span class="fab fa-facebook" aria-hidden="true"></span>
 													<span class="sr-only">Stag Barbershop on Facebook</span>
 												</a>
 											</li>
 										</ul>
-									</div>
+									</div> */ ?>
 								</div>
 							</div>
 						</div>

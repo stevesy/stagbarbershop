@@ -4,15 +4,17 @@
 	align-items: center;
 	justify-content: center;
 	min-height: 400px;
-	padding-top: 150px;
-	background-color: #000;
+	padding-top: 100px;
+	background-color: #111;
 
 	@include media-breakpoint-up(md) {
-		height: 50vh;
+		// height: 50vh;
+		height: 100vh;
+		max-height: 900px;
 	}
 
 	@include media-breakpoint-up(lg) {
-		height: 75vh;
+		// height: 75vh;
 	}
 
 	.post-thumbnail {
@@ -21,7 +23,7 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
-		opacity: 0.25;
+		opacity: 0.5;
 
 		img {
 			width: 100%;

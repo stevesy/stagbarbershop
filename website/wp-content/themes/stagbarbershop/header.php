@@ -26,40 +26,39 @@
 			</a>
 
 			<header id="masthead" class="site-header navbar">
-				<div class="container-fluid">
-					<div class="site-branding">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo-stag.svg" alt="<?php bloginfo( 'name' ); ?>" />
-						</a>
-					</div>
-
-					<button id="menu-toggle" class="menu-toggle collapsed d-md-none" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="hamburger">
-							<span></span>
-							<span></span>
-							<span></span>
-						</span>
-					</button>
-
-					<nav id="site-nav" class="navbar-collapse collapsed">
-						<?php
-							wp_nav_menu(
-								array(
-									'theme_location' => 'menu-1',
-									'menu_id'        => 'primary-menu',
-									'menu_class'     => 'navbar-nav flex-md-row justify-content-md-center text-center',
-									'container'      => ''
-								)
-							);
-						?>
-
-						<div class="navbar-address text-center d-md-none">
-							3064 South Delaware Avenue<br />
-							Milwaukee, WI 53207<br />
-							<a href="tel:4144897824">414.489.STAG</a> 
-						</div>
-					</nav>
+				<div class="bg bg-dark d-none d-md-block"></div>
+				<div class="site-branding">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/logo-stag.svg" alt="<?php bloginfo( 'name' ); ?>" />
+					</a>
 				</div>
+
+				<button id="menu-toggle" class="menu-toggle collapsed d-md-none" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="hamburger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</span>
+				</button>
+
+				<nav id="site-nav" class="navbar-collapse collapsed">
+					<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'menu-1',
+								'menu_id'        => 'primary-menu',
+								'menu_class'     => 'navbar-nav flex-md-row justify-content-md-between text-center',
+								'container'      => ''
+							)
+						);
+					?>
+
+					<div class="navbar-address text-center d-md-none">
+						3064 South Delaware Avenue<br />
+						Milwaukee, WI 53207<br />
+						<a href="tel:4144897824">414.489.STAG</a> 
+					</div>
+				</nav>
 			</header>
 
 			<div id="content" class="site-content">
