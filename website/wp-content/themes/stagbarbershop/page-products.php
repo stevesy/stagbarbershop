@@ -31,12 +31,12 @@
 								</div>
 							</div>
 							<div class="slider-wrapper">
-								<div id="slider" class="slider">
+								<div id="slider" class="slider" data-lazyload="true">
 									<?php if ( have_rows( 'product_photos' ) ) : ?>
 										<?php while ( have_rows( 'product_photos' ) ) : the_row(); ?>
 											<?php $image = get_sub_field( 'image' ); ?>
 											<div>
-												<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+												<img class="tns-lazy-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 											</div>
 										<?php endwhile; ?>
 									<?php endif; ?>

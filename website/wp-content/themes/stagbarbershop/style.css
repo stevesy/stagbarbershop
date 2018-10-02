@@ -5471,7 +5471,7 @@ a.text-dark:hover, a.text-dark:focus {
       overflow: visible;
       max-width: 768px;
       margin: 1rem auto 0; } }
-  @media (min-width: 768px) and (min-width: 992px) {
+  @media (min-width: 768px) and (min-width: 1200px) {
     .navbar-collapse {
       max-width: 1024px; } }
   .navbar-collapse.collapsed {
@@ -5488,13 +5488,16 @@ a.text-dark:hover, a.text-dark:focus {
 .navbar-nav {
   text-transform: uppercase;
   font-size: 8vw;
-  margin: 100px 0 0;
+  margin: 180px 0 0;
   transition: transform 600ms; }
   @media (min-width: 768px) {
     .navbar-nav {
       margin: 0;
-      font-size: 1.25rem;
+      font-size: 1rem;
       transition: none; } }
+  @media (min-width: 1200px) {
+    .navbar-nav {
+      font-size: 1.25rem; } }
   .navbar-nav::after {
     content: '';
     display: block;
@@ -5504,38 +5507,25 @@ a.text-dark:hover, a.text-dark:focus {
     @media (min-width: 768px) {
       .navbar-nav::after {
         content: none; } }
-  .navbar-nav .menu-item a {
-    position: relative;
-    display: block;
-    padding: 0.25rem 0;
-    color: inherit; }
+  .navbar-nav .menu-item {
+    transition: transform 150ms; }
     @media (min-width: 768px) {
-      .navbar-nav .menu-item a {
-        display: inline;
-        padding: 1rem; } }
-    .navbar-nav .menu-item a:hover {
-      text-decoration: none; }
+      .navbar-nav .menu-item:hover, .navbar-nav .menu-item.current_page_item {
+        transform: scale(1.3); } }
+    .navbar-nav .menu-item a {
+      position: relative;
+      display: block;
+      padding: 0.25rem 0;
+      color: inherit; }
       @media (min-width: 768px) {
-        .navbar-nav .menu-item a:hover:after {
-          content: '';
-          position: absolute;
-          bottom: 2px;
-          right: 1rem;
-          left: 1rem;
-          height: 5px;
-          background-color: #fff; } }
+        .navbar-nav .menu-item a {
+          display: inline;
+          padding: 1rem; } }
+      .navbar-nav .menu-item a:hover {
+        text-decoration: none; }
   @media (min-width: 768px) {
-    .navbar-nav .menu-item.current_page_item a:after {
-      content: '';
-      position: absolute;
-      bottom: 2px;
-      right: 1rem;
-      left: 1rem;
-      height: 5px;
-      background-color: #fff; } }
-  @media (min-width: 992px) {
     .navbar-nav .menu-item-products {
-      margin: 0 95px 0 -50px; } }
+      margin: 0 85px 0 -50px; } }
 
 .navbar-address {
   font-size: 5vw;
@@ -5651,6 +5641,9 @@ a.text-dark:hover, a.text-dark:focus {
     bottom: 0;
     left: 0;
     opacity: 0.5; }
+    .page-header .post-thumbnail .slider {
+      position: absolute;
+      bottom: 0; }
     .page-header .post-thumbnail img {
       width: 100%;
       height: 100%;

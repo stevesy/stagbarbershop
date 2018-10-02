@@ -70,6 +70,7 @@
 					</div>
 				</div>
 			</div>
+			<?php echo do_shortcode('[instagram-feed]'); ?>
 			<div class="footer-bottom bg-white py-3 pb-3">
 				<div class="container-fluid">
 					<div class="text-center">

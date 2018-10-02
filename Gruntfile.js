@@ -20,18 +20,6 @@ module.exports = function(grunt) {
 			}
 		},
 
-		uglify: {
-			dist: {
-				options: {
-					sourceMap: true,
-					quoteStyle: 1,
-				},
-				files: {
-					'./website/wp-content/themes/stagbarbershop/js/site.js': './website/wp-content/themes/stagbarbershop/js/site.js'
-				}
-			}
-		},
-
 		sass: {
 			options: {
 				implementation: sass,
@@ -49,8 +37,7 @@ module.exports = function(grunt) {
 				processors: [
 					require('autoprefixer')({
 						browsers: ['last 2 versions']
-					}),
-					require('cssnano')
+					})
 				]
 			},
 			dist: {
@@ -74,16 +61,7 @@ module.exports = function(grunt) {
 		'browserify'
 	]);
 
-	grunt.registerTask('scripts-prod', [
-		'browserify',
-		'uglify'
-	]);
-
 	grunt.registerTask('styles', [
-		'sass'
-	]);
-
-	grunt.registerTask('styles-prod', [
 		'sass',
 		'postcss'
 	]);
@@ -92,14 +70,8 @@ module.exports = function(grunt) {
 		'scripts',
 		'styles'
 	]);
-	
-	grunt.registerTask('build-prod', [
-		'scripts-prod',
-		'styles-prod'
-	]);
 
 	grunt.loadNpmTasks('grunt-browserify');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-contrib-watch');

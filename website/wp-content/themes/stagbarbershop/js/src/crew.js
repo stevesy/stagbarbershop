@@ -1,5 +1,5 @@
 if (document.getElementsByClassName('page-crew')[0]) {
-	const crew = document.querySelectorAll('.item-crew a');
+	const crew = document.getElementsByClassName('item-crew');
 	Array.from(crew).forEach(element => {
 		const photos = element.querySelectorAll('.crewmember-photos div');
 
