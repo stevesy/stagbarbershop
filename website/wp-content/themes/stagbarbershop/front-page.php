@@ -21,15 +21,16 @@ get_header();
 					<header class="page-header">
 						<?php stagbarbershop_post_thumbnail(); ?>
 						<div class="position-relative text-center">
-							<?php the_title( '<h1 class="page-title mb-3">', '</h1>' ); ?>
-							<a class="btn btn-primary" href="https://www.vagaro.com/stagbarbershop/book-now" target="_blank" rel="noopener">Book Now</a>
+							<?php the_title( '<h1 class="page-title mb-4">', '</h1>' ); ?>
+							<a class="btn btn-primary btn-lg" href="https://www.vagaro.com/stagbarbershop/book-now" target="_blank" rel="noopener">Book Now</a>
 						</div>
 					</header>
 
-					<div class="page-content text-center">
-						<div class="container-fluid">
+					<div class="page-content py-5 bg-white text-center">
+						<div class="container-fluid py-2 py-md-3 my-md-3">
 							<?php the_content(); ?>
-							<p><a class="btn btn-primary" href="/services">Barber Services</a></p>
+							
+							<a class="btn btn-primary btn-lg" href="/services">Barber Services</a>
 						</div>
 					</div>
 				</div>

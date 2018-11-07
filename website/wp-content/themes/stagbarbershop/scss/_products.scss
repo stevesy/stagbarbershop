@@ -6,21 +6,42 @@
 
 		.container-fluid {
 			max-width: none;
-		}
 
-		.col-md-6 {
-			@include media-breakpoint-up(md) {
-				padding: 0 5%;
+			& > .row > .col-md-6 {
+				@include media-breakpoint-up(md) {
+					// padding: 0 5%;
+				}
 			}
 		}
 	}
 }
 
-.products-list {
-	font-size: 1.5rem;
+.products-list-wrapper {
+	margin: 0 auto;
+	max-width: 700px;
+}
 
-	@include media-breakpoint-up(lg) {
-		font-size: 2rem;
+.products-list {
+	font-size: 1rem;
+	line-height: 1.2;
+	margin-bottom: -1.5rem;
+
+	.logo {
+		position: relative;
+		height: 100px;
+		max-width: 150px;
+		margin: 0 auto;
+		overflow: hidden;
+
+		img {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			max-height: 100%;
+		}
 	}
 }
 

@@ -11,22 +11,28 @@
 							<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
 						</header>
 
-						<div class="page-content d-md-flex align-items-center justify-content-center">
-							<div class="container-fluid">
+						<div class="page-content pt-5 pb-md-5 bg-white d-md-flex align-items-center justify-content-center">
+							<div class="container-fluid pt-2 pb-md-2">
 								<div class="row">
 									<div class="col-md-6">
 										<p class="intro-text mb-4 text-center">
 											<?php echo get_field( 'intro_text' ); ?>
 										</p>
-										<ul class="products-list list-unstyled mb-0 text-center">
-											<?php if ( have_rows( 'products' ) ) : ?>
-												<?php while ( have_rows( 'products' ) ) : the_row(); ?>
-													<li>
-														<?php echo get_sub_field( 'product_name' ); ?>
-													</li>
-												<?php endwhile; ?>
-											<?php endif; ?>
-										</ul>
+										<div class="products-list-wrapper">
+											<ul class="row products-list list-unstyled text-center">
+												<?php if ( have_rows( 'products' ) ) : ?>
+													<?php while ( have_rows( 'products' ) ) : the_row(); ?>
+														<?php $image = get_sub_field( 'product_image' ); ?>
+														<li class="col-6 col-sm-4 col-md-6 col-lg-4 mb-4">
+															<div class="logo mb-3">
+																<img class="img-fluid" src="<?php echo $image['url']; ?>" alt="" />
+															</div>
+															<?php echo get_sub_field( 'product_name' ); ?>
+														</li>
+													<?php endwhile; ?>
+												<?php endif; ?>
+											</ul>
+										</div>
 									</div>
 								</div>
 							</div>

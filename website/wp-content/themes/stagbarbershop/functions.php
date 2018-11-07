@@ -131,7 +131,7 @@ add_action( 'widgets_init', 'stagbarbershop_widgets_init' );
  */
 function stagbarbershop_scripts() {
 	wp_enqueue_style( 'fontawesome', '//use.fontawesome.com/releases/v5.2.0/css/all.css' );
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Slabo+27px|Roboto+Condensed:700' );
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Slabo+27px|Oswald:700' );
 	wp_enqueue_style( 'tiny-slider-css', '//unpkg.com/tiny-slider@2.8.2/dist/tiny-slider.css' );
 	wp_enqueue_style( 'stagbarbershop-style', get_stylesheet_uri() );
 

@@ -11,8 +11,8 @@
 							<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
 						</header>
 
-						<div class="page-content">
-							<div class="container-fluid">
+						<div class="page-content py-5 bg-white">
+							<div class="container-fluid py-2 py-md-3 my-md-3">
 								<ul class="list-unstyled mb-4 mb-md-5">
 									<?php if ( have_rows( 'services' ) ) : ?>
 										<?php while ( have_rows( 'services' ) ) : the_row(); ?>
@@ -25,9 +25,12 @@
 								</ul>
 
 								<p class="text-center">
-									<a class="btn btn-primary" href="https://www.vagaro.com/stagbarbershop/book-now" target="_blank" rel="noopener">Book Now</a>
+									<a class="btn btn-primary btn-lg" href="https://www.vagaro.com/stagbarbershop/book-now" target="_blank" rel="noopener">Book Now</a>
 								</p>
-								<p class="small text-center">By appointment only. We do not accept appointments or cancellations via email.</p>
+
+								<p class="small text-center">
+									By appointment only. We do not accept appointments or cancellations via email.
+								</p>
 							</div>
 						</div>
 					</div>

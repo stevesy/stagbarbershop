@@ -21,16 +21,17 @@
 							<?php else : ?>
 								<?php stagbarbershop_post_thumbnail(); ?>
 							<?php endif; ?>
+
 							<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
 						</header>
 
-						<div class="page-content">
-							<div class="container-fluid">
+						<div class="page-content py-5 bg-white">
+							<div class="container-fluid py-2 py-md-3 my-md-3">
 								<ul class="list-crew list-unstyled text-center row justify-content-center">
 									<?php if ( have_rows( 'employees' ) ) : ?>
 										<?php while ( have_rows( 'employees' ) ) : the_row(); ?>
 											<li class="item-crew col-6 col-md-4">
-												<?php if (!empty(get_sub_field( 'instagram' ))) : ?>
+												<?php if ( !empty( get_sub_field( 'instagram' ) ) ) : ?>
 													<a class="d-block" href="https://www.instagram.com/<?php echo get_sub_field( 'instagram' ); ?>" target="_blank" rel="noopener">
 												<?php endif; ?>
 													<div class="crewmember-photos mb-3">
@@ -38,7 +39,7 @@
 															<?php while ( have_rows( 'photos' ) ) : the_row(); ?>
 																<?php $photo = get_sub_field('photo'); ?>
 																<?php if ( get_row_index() === 1 ) : ?>
-																	<div class="active">
+																	<div class="d-block">
 																		<img src="<?php echo $photo['url']; ?>" alt="" />
 																	</div>
 																<?php else : ?>
@@ -49,13 +50,13 @@
 															<?php endwhile; ?>
 														<?php endif; ?>
 													</div>
-													<h2 class="crewmember-name text-uppercase h3 mb-0">
+													<h2 class="crewmember-name text-uppercase text-secondary h3 mb-0">
 														<?php echo get_sub_field( 'name' ); ?>
 													</h2>
-													<span class="crewmember-title">
+													<span class="crewmember-title text-dark">
 														<?php echo get_sub_field( 'title' ); ?>
 													</span>
-												<?php if (!empty(get_sub_field( 'instagram' ))) : ?>
+												<?php if ( !empty( get_sub_field( 'instagram' ) ) ) : ?>
 													</a>
 												<?php endif; ?>
 											</li>

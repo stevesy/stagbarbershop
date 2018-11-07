@@ -1,4 +1,4 @@
-if (document.getElementsByClassName('page-crew')[0]) {
+if (document.getElementsByClassName('page-crew').length) {
 	const crew = document.getElementsByClassName('item-crew');
 	Array.from(crew).forEach(element => {
 		const photos = element.querySelectorAll('.crewmember-photos div');
@@ -16,14 +16,14 @@ if (document.getElementsByClassName('page-crew')[0]) {
 				});
 
 				if (photos[1]) {
-					photos[0].classList.remove('active');
-					photos[1].classList.add('active');
+					photos[0].classList.remove('d-block');
+					photos[1].classList.add('d-block');
 
 					let index = 1;
 					let nextIndex = photos[2] ? 2 : 0;
 					interval = global.setInterval(() => {
-						photos[index].classList.remove('active');
-						photos[nextIndex].classList.add('active');
+						photos[index].classList.remove('d-block');
+						photos[nextIndex].classList.add('d-block');
 						index = index === photos.length - 1 ? 0 : index + 1;
 						nextIndex = nextIndex === photos.length - 1 ? 0 : nextIndex + 1;
 					}, 750);
@@ -31,8 +31,8 @@ if (document.getElementsByClassName('page-crew')[0]) {
 			});
 
 			element.addEventListener('mouseleave', () => {
-				element.getElementsByClassName('active')[0].classList.remove('active');
-				photos[0].classList.add('active');
+				element.getElementsByClassName('d-block')[0].classList.remove('d-block');
+				photos[0].classList.add('d-block');
 				clearInterval(interval);
 			});
 		}
