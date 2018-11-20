@@ -31,9 +31,12 @@
 									<?php if ( have_rows( 'employees' ) ) : ?>
 										<?php while ( have_rows( 'employees' ) ) : the_row(); ?>
 											<li class="item-crew col-6 col-md-4">
-												<?php if ( !empty( get_sub_field( 'instagram' ) ) ) : ?>
-													<a class="d-block" href="https://www.instagram.com/<?php echo get_sub_field( 'instagram' ); ?>" target="_blank" rel="noopener">
-												<?php endif; ?>
+												<?php
+													$name = get_sub_field( 'name' );
+													$title = get_sub_field( 'title' );
+													$instagram = get_sub_field( 'instagram' );
+												?>
+												<?php if ( !empty( $instagram ) ) : ?><a class="crewmember d-block mx-auto" href="https://www.instagram.com/<?php echo $instagram; ?>" target="_blank" rel="noopener"><?php else: ?><div class="crewmember mx-auto"><?php endif; ?>
 													<div class="crewmember-photos mb-3">
 														<?php if ( have_rows( 'photos' ) ) : ?>
 															<?php while ( have_rows( 'photos' ) ) : the_row(); ?>
@@ -51,14 +54,12 @@
 														<?php endif; ?>
 													</div>
 													<h2 class="crewmember-name text-uppercase text-secondary h3 mb-0">
-														<?php echo get_sub_field( 'name' ); ?>
+														<?php echo $name; ?>
 													</h2>
 													<span class="crewmember-title text-dark">
-														<?php echo get_sub_field( 'title' ); ?>
+														<?php echo $title; ?>
 													</span>
-												<?php if ( !empty( get_sub_field( 'instagram' ) ) ) : ?>
-													</a>
-												<?php endif; ?>
+												<?php if ( !empty( $instagram ) ) : ?></a><?php else: ?></div><?php endif; ?>
 											</li>
 										<?php endwhile; ?>
 									<?php endif; ?>

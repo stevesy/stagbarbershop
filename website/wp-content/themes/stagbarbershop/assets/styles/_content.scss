@@ -7,14 +7,19 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	min-height: 400px;
 	background-color: #111;
-	padding-top: 124px;
+	height: 100vh;
+	// min-height: 400px;
+	// padding-top: 124px;
 	margin-top: -124px;
 
+	@include media-breakpoint-up(sm) {
+		padding-top: 124px;
+	}
+
 	@include media-breakpoint-up(md) {
-		height: 100vh;
-		max-height: 900px;
+		// height: 100vh;
+		// max-height: 900px;
 	}
 
 	.post-thumbnail {

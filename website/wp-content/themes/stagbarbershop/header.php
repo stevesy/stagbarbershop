@@ -29,7 +29,7 @@
 				<div class="bg bg-dark d-none d-md-block"></div>
 				<div class="site-branding">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/logo-stag.svg" alt="<?php bloginfo( 'name' ); ?>" />
+						<img src="<?php echo get_template_directory_uri(); ?>/public/img/logo-stag.svg" alt="<?php bloginfo( 'name' ); ?>" />
 					</a>
 				</div>
 

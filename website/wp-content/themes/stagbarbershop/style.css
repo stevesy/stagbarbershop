@@ -4694,8 +4694,6 @@ a.text-dark:hover, a.text-dark:focus {
   cursor: pointer; }
   .menu-toggle.collapsed {
     position: absolute; }
-  .menu-toggle:not(.collapsed) {
-    top: 46px; }
 
 .hamburger {
   position: relative;
@@ -4780,14 +4778,12 @@ a.text-dark:hover, a.text-dark:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 400px;
   background-color: #111;
-  padding-top: 124px;
+  height: 100vh;
   margin-top: -124px; }
-  @media (min-width: 768px) {
+  @media (min-width: 576px) {
     .page-header {
-      height: 100vh;
-      max-height: 900px; } }
+      padding-top: 124px; } }
   .page-header .post-thumbnail {
     position: fixed;
     top: 0;
@@ -4905,25 +4901,25 @@ a.text-dark:hover, a.text-dark:focus {
     width: 100%;
     object-fit: cover; }
 
+.page-crew .post-thumbnail img {
+  object-position: left center; }
+
 .list-crew {
   margin-bottom: -2rem; }
   @media (min-width: 768px) {
     .list-crew {
       margin-bottom: -2.5rem; } }
 
-.item-crew {
+.crewmember {
+  color: inherit;
+  max-width: 200px;
   margin-bottom: 2rem; }
   @media (min-width: 768px) {
-    .item-crew {
+    .crewmember {
       margin-bottom: 2.5rem; } }
-  .item-crew a {
-    display: block;
-    margin: 0 auto;
-    max-width: 250px;
-    color: inherit; }
-    .item-crew a:hover {
-      color: #185da7;
-      text-decoration: none; }
+  .crewmember:hover {
+    color: #185da7;
+    text-decoration: none; }
 
 .crewmember-photos {
   position: relative;

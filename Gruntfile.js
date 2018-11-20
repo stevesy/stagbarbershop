@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 					}
 				},
 				files: {
-					'./website/wp-content/themes/stagbarbershop/js/site.js': './website/wp-content/themes/stagbarbershop/js/src/index.js'
+					'./website/wp-content/themes/stagbarbershop/public/js/site.js': './website/wp-content/themes/stagbarbershop/assets/scripts/index.js'
 				}
 			}
 		},
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				files: {
-					'./website/wp-content/themes/stagbarbershop/style.css': './website/wp-content/themes/stagbarbershop/scss/style.scss'
+					'./website/wp-content/themes/stagbarbershop/style.css': './website/wp-content/themes/stagbarbershop/assets/styles/index.scss'
 				}
 			}
 		},
@@ -47,11 +47,11 @@ module.exports = function(grunt) {
 
 		watch: {
 			css: {
-				files: ['./website/wp-content/themes/stagbarbershop/scss/**/*.scss'],
+				files: ['./website/wp-content/themes/stagbarbershop/assets/styles/**/*.scss'],
 				tasks: 'sass'
 			},
 			js: {
-				files: ['Gruntfile.js', './website/wp-content/themes/stagbarbershop/js/src/**/*.js'],
+				files: ['Gruntfile.js', './website/wp-content/themes/stagbarbershop/assets/scripts/**/*.js'],
 				tasks: 'browserify'
 			}
 		}

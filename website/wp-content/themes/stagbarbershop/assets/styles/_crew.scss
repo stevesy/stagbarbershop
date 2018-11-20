@@ -1,3 +1,11 @@
+.page-crew {
+	.post-thumbnail {
+		img {
+			object-position: left center;
+		}
+	}
+}
+
 .list-crew {
 	margin-bottom: -2rem;
 
@@ -6,24 +14,19 @@
 	}
 }
 
-.item-crew {
+.crewmember {
+	color: inherit;
+	max-width: 200px;
 	margin-bottom: 2rem;
 
 	@include media-breakpoint-up(md) {
 		margin-bottom: 2.5rem;
 	}
 
-	a {
-		display: block;
-		margin: 0 auto;
-		max-width: 250px;
-		color: inherit;
-
-		&:hover {
-			color: $primary;
-			text-decoration: none;
-		}
-	}
+	&:hover {
+		color: $primary;
+		text-decoration: none;
+	}	
 }
 
 .crewmember-photos {
