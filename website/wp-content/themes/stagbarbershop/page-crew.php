@@ -2,9 +2,7 @@
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-			
 			<?php while ( have_posts() ) : the_post(); ?>
-
 					<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<header class="page-header">
 							<?php if ( have_rows( 'featured_images' ) ) : ?>
@@ -43,7 +41,7 @@
 																<?php $photo = get_sub_field('photo'); ?>
 																<?php if ( get_row_index() === 1 ) : ?>
 																	<div class="d-block">
-																		<img src="<?php echo $photo['url']; ?>" alt="" />
+																		<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="<?php echo $photo['url']; ?>" alt="" />
 																	</div>
 																<?php else : ?>
 																	<div>
@@ -67,9 +65,7 @@
 							</div>
 						</div>
 					</div>
-
 			<?php endwhile; ?>
-
 		</main>
 	</div>
 

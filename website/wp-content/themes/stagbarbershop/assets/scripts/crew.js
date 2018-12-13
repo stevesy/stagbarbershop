@@ -1,3 +1,5 @@
+import LazyLoad from 'vanilla-lazyload';
+
 if (document.getElementsByClassName('page-crew').length) {
 	const crewmembers = document.getElementsByClassName('crewmember');
 	Array.from(crewmembers).forEach(crewmember => {
@@ -5,6 +7,13 @@ if (document.getElementsByClassName('page-crew').length) {
 
 		if (photos.length) {
 			let interval;
+
+			new LazyLoad({
+				elements_selector: '.crewmember-photos div:first-child img',
+				callback_enter(el) {
+					el.parentNode.parentNode.parentNode.style.opacity = 1;
+				}
+			});
 			
 			crewmember.addEventListener('mouseenter', () => {		
 				Array.from(photos).forEach(photo => {

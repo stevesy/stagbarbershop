@@ -15,9 +15,11 @@
 							<div class="container-fluid pt-2 pb-md-2">
 								<div class="row">
 									<div class="col-md-6">
-										<p class="intro-text mb-4 text-center">
-											<?php echo get_field( 'intro_text' ); ?>
-										</p>
+										<?php if ( get_the_content() ) : ?>
+											<div class="mb-4">
+												<?php the_content(); ?>
+											</div>
+										<?php endif; ?>
 										<div class="products-list-wrapper">
 											<ul class="row products-list list-unstyled text-center">
 												<?php if ( have_rows( 'products' ) ) : ?>

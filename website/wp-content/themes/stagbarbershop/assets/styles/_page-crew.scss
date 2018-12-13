@@ -18,6 +18,8 @@
 	color: inherit;
 	max-width: 200px;
 	margin-bottom: 2rem;
+	opacity: 0;
+	transition: opacity 500ms;
 
 	@include media-breakpoint-up(md) {
 		margin-bottom: 2.5rem;

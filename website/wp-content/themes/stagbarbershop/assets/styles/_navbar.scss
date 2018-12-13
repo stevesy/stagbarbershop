@@ -137,6 +137,7 @@
 			position: relative;
 			display: block;
 			padding: 0.25rem 0;
+			letter-spacing: 1px;
 			color: inherit;
 
 			@include media-breakpoint-up(md) {
@@ -180,10 +181,6 @@
 
 	&.collapsed {
 		position: absolute;
-	}
-
-	&:not(.collapsed) {
-		// top: 46px;
 	}
 }
 

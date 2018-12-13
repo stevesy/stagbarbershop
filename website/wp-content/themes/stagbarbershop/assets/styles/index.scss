@@ -18,11 +18,15 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 @import "bootstrap";
 
+@import "wp-colors";
+@import "wp-block-columns";
+@import "wp-block-button";
+
 @import "base";
 @import "navbar";
 @import "footer";
 @import "content";
-@import "home";
-@import "services";
-@import "products";
-@import "crew";
+@import "page-home";
+@import "page-services";
+@import "page-products";
+@import "page-crew";
