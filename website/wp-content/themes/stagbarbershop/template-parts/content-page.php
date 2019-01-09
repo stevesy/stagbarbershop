@@ -10,11 +10,7 @@
 ?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="page-header">
-		<?php stagbarbershop_post_thumbnail(); ?>
-		
-		<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
-	</header>
+	<?php get_template_part( 'template-parts/page-header' ); ?>
 
 	<div class="page-content py-5 bg-white">
 		<div class="container-fluid py-2 py-md-3 my-md-3">

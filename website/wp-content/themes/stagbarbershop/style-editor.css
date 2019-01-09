@@ -1,0 +1,12 @@
+.wp-block {
+	max-width: 1000px;
+}
+
+.wp-block[data-align="wide"] {
+	max-width: 1080px;
+}
+
+.wp-block[data-align="full"] {
+	max-width: none;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLWVkaXRvci5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Q0FDQyxrQkFBa0I7Q0FDbEI7O0FBRUQ7Q0FDQyxrQkFBa0I7Q0FDbEI7O0FBRUQ7Q0FDQyxnQkFBZ0I7Q0FDaEIiLCJmaWxlIjoic3R5bGUtZWRpdG9yLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi53cC1ibG9jayB7XG5cdG1heC13aWR0aDogMTAwMHB4O1xufVxuXG4ud3AtYmxvY2tbZGF0YS1hbGlnbj1cIndpZGVcIl0ge1xuXHRtYXgtd2lkdGg6IDEwODBweDtcbn1cblxuLndwLWJsb2NrW2RhdGEtYWxpZ249XCJmdWxsXCJdIHtcblx0bWF4LXdpZHRoOiBub25lO1xufSJdfQ== */

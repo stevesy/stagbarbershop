@@ -22,12 +22,12 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				stagbarbershop_posted_on();
-				stagbarbershop_posted_by();
+					stagbarbershop_posted_on();
+					stagbarbershop_posted_by();
 				?>
-			</div><!-- .entry-meta -->
+			</div>
 		<?php endif; ?>
-	</header><!-- .entry-header -->
+	</header>
 
 	<?php stagbarbershop_post_thumbnail(); ?>
 
@@ -51,9 +51,9 @@
 			'after'  => '</div>',
 		) );
 		?>
-	</div><!-- .entry-content -->
+	</div>
 
 	<footer class="entry-footer">
 		<?php stagbarbershop_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+	</footer>
+</article>

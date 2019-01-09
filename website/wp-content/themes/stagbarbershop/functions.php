@@ -79,6 +79,45 @@ if ( ! function_exists( 'stagbarbershop_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+		// Add theme support for custom color palette for Gutenberg blocks.
+		add_theme_support(
+			'editor-color-palette', array(
+				array(
+					'name'	=> esc_html__( 'Primary', '@@textdomain' ),
+					'slug'	=> 'primary',
+					'color'	=> '#185da7',
+				),
+				array(
+					'name'	=> esc_html__( 'Secondary', '@@textdomain' ),
+					'slug'	=> 'secondary',
+					'color'	=> '#9b1f21',
+				),
+				array(
+					'name'	=> esc_html__( 'Light', '@@textdomain' ),
+					'slug'	=> 'light',
+					'color'	=> '#fff',
+				),
+				array(
+					'name'	=> esc_html__( 'Dark', '@@textdomain' ),
+					'slug'	=> 'dark',
+					'color'	=> '#212529',
+				)
+			)
+		);
+
+		// Add theme support for wide alignment class for Gutenberg blocks.
+		add_theme_support( 'align-wide' );
+
+		// Add theme support for responsive embeds for Gutenberg blocks.
+		add_theme_support( 'responsive-embeds' );
+
+		// Add theme support for core styles for Gutenberg blocks.
+		// add_theme_support( 'wp-block-styles' );
+
+		// Add theme support for custom editor styles
+		add_theme_support( 'editor-styles' );
+		add_editor_style( 'style-editor.css' );
 	}
 endif;
 add_action( 'after_setup_theme', 'stagbarbershop_setup' );
@@ -197,44 +236,22 @@ function remove_search_widget() {
 add_action( 'widgets_init', 'remove_search_widget' );
 
 /**
- * Custom admin styles
+ * Remove menu items from admin
  */
-function stagbarbershop_custom_admin_styles() {
-	echo '<style>
-		.wp-block {
-			max-width: 980px;
-		}
-	</style>';
+function remove_menu_pages() {
+	if ( ! current_user_can('administrator') ) {
+		remove_menu_page( 'edit.php' );
+		remove_menu_page( 'edit-comments.php' );
+	}
 }
-add_action('admin_head', 'stagbarbershop_custom_admin_styles');
+add_action( 'admin_menu', 'remove_menu_pages' );
 
-/**
- * Add support for custom color palettes in Gutenberg.
- */
-function stagbarbershop_gutenberg_color_palette() {
-	add_theme_support(
-		'editor-color-palette', array(
-			array(
-				'name'	=> esc_html__( 'Primary', '@@textdomain' ),
-				'slug'	=> 'primary',
-				'color'	=> '#185da7',
-			),
-			array(
-				'name'	=> esc_html__( 'Secondary', '@@textdomain' ),
-				'slug'	=> 'secondary',
-				'color'	=> '#9b1f21',
-			),
-			array(
-				'name'	=> esc_html__( 'Light', '@@textdomain' ),
-				'slug'	=> 'light',
-				'color'	=> '#fff',
-			),
-			array(
-				'name'	=> esc_html__( 'Dark', '@@textdomain' ),
-				'slug'	=> 'dark',
-				'color'	=> '#212529',
-			)
-		)
-	);
+if ( function_exists('acf_add_options_page') ) {
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
 }
-add_action( 'after_setup_theme', 'stagbarbershop_gutenberg_color_palette' );

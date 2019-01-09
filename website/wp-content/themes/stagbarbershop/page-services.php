@@ -6,10 +6,7 @@
 			<?php while ( have_posts() ) : the_post(); ?>
 
 					<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<header class="page-header">
-							<?php stagbarbershop_post_thumbnail(); ?>
-							<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
-						</header>
+						<?php get_template_part( 'template-parts/page-header' ); ?>
 
 						<div class="page-content py-5 bg-white">
 							<div class="container-fluid py-2 py-md-3 my-md-3">
@@ -24,13 +21,7 @@
 									<?php endif; ?>
 								</ul>
 
-								<p class="text-center">
-									<a class="btn btn-primary btn-lg" href="https://www.vagaro.com/stagbarbershop/book-now" target="_blank" rel="noopener">Book Now</a>
-								</p>
-
-								<p class="small text-center">
-									By appointment only. We do not accept appointments or cancellations via email.
-								</p>
+								<?php the_content(); ?>
 							</div>
 						</div>
 					</div>

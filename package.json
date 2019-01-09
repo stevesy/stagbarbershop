@@ -4,23 +4,27 @@
   "license": "MIT",
   "main": "gulpfile.js",
   "scripts": {
-    "build": "grunt build",
-    "watch": "grunt watch"
+    "build-css": "node-sass website/wp-content/themes/stagbarbershop/assets/styles/ -o website/wp-content/themes/stagbarbershop/",
+    "watch-css": "npm run build-css && node-sass -w website/wp-content/themes/stagbarbershop/assets/styles/ -o website/wp-content/themes/stagbarbershop/ --source-map true",
+    "postcss": "./node_modules/postcss-cli/bin/postcss website/wp-content/themes/stagbarbershop/**/*.css --replace -u autoprefixer",
+    "build-js": "webpack --config webpack.config.js",
+    "watch-js": "npm run build-js && webpack --config webpack.config.js -w",
+    "build": "npm run build-css && npm run postcss && npm run build-js",
+    "watch": "npm-run-all -p watch-css watch-js"
   },
   "devDependencies": {
-    "autoprefixer": "^9.4.2",
-    "babel-cli": "^6.18.0",
-    "babel-preset-env": "^1.6.1",
-    "babelify": "^8.0.0",
-    "grunt": "^1.0.3",
-    "grunt-browserify": "^5.3.0",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-postcss": "^0.9.0",
-    "grunt-sass": "^3.0.2",
-    "node-sass": "^4.11.0"
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.0",
+    "autoprefixer": "^9.4.3",
+    "babel-loader": "^8.0.4",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.0.1",
+    "webpack": "^4.28.0",
+    "webpack-cli": "^3.1.2"
   },
   "dependencies": {
-    "bootstrap": "^4.1.3",
+    "bootstrap": "^4.2.1",
     "vanilla-lazyload": "^8.17.0"
   }
 }

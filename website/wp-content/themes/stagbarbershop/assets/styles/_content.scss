@@ -10,17 +10,11 @@
 	background-color: $gray-900;
 	color: #fff;
 	height: 100vh;
-	// min-height: 400px;
-	// padding-top: 124px;
+	max-height: 768px;
 	margin-top: -124px;
 
 	@include media-breakpoint-up(sm) {
 		padding-top: 124px;
-	}
-
-	@include media-breakpoint-up(md) {
-		// height: 100vh;
-		// max-height: 900px;
 	}
 
 	.post-thumbnail {
@@ -34,6 +28,10 @@
 		.slider {
 			position: absolute;
 			bottom: 0;
+
+			[data-action="stop"] {
+				display: none;
+			}
 		}
 
 		img {
@@ -48,8 +46,7 @@
 		text-transform: uppercase;
 		text-align: center;
 		margin-bottom: 0;
-		padding: 0 1rem;
-		font-size: 10vw;
+		font-size: 11vw;
 		line-height: 1;
 		letter-spacing: 0.025em;
 
@@ -93,7 +90,11 @@
 		max-width: 1000px;
 	}
 
-	p:last-child {
-		margin-bottom: 0;
+	p,
+	ul,
+	ol {
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 }
