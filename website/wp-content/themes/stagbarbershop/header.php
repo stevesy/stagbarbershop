@@ -47,16 +47,23 @@
 							array(
 								'theme_location' => 'menu-1',
 								'menu_id'        => 'primary-menu',
-								'menu_class'     => 'navbar-nav flex-md-row justify-content-md-between text-center',
+								'menu_class'     => 'navbar-nav flex-md-row text-center',
 								'container'      => ''
 							)
 						);
 					?>
 
 					<div class="navbar-address text-center d-md-none">
-						3064 South Delaware Avenue<br />
-						Milwaukee, WI 53207<br />
-						<a href="tel:4144897824">414.489.STAG</a> 
+						<?php echo get_field( 'location_street_address', 'option' ); ?><br />
+						<?php echo get_field( 'location_city', 'option' ); ?>
+						<?php echo get_field( 'location_state', 'option' ); ?>
+						<?php echo get_field( 'location_zip_code', 'option' ); ?><br />
+						<a href="tel:<?php echo get_field( 'location_phone_number', 'option' ); ?>">
+							<?php echo get_field( 'location_phone_number_display', 'option' ); ?>
+						</a><br>
+						<a class="text-underline" href="https://www.google.com/maps?saddr=My+Location&amp;daddr=<?php echo get_field( 'street_address', 'option' ); ?>+<?php echo get_field( 'location_city', 'option' ); ?>+<?php echo get_field( 'location_state', 'option' ); ?>+<?php echo get_field( 'location_zip_code', 'option' ); ?>" target="_blank" rel="noopener">
+							Get Directions
+						</a>
 					</div>
 				</nav>
 			</header>

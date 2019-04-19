@@ -11,11 +11,11 @@ if (document.getElementsByClassName('page-crew').length) {
 			new LazyLoad({
 				elements_selector: '.crewmember-photos div:first-child img',
 				callback_enter(el) {
-					el.parentNode.parentNode.parentNode.style.opacity = 1;
+					el.parentNode.parentNode.parentNode.classList.add('show');
 				}
 			});
-			
-			crewmember.addEventListener('mouseenter', () => {		
+
+			crewmember.addEventListener('mouseenter', () => {
 				Array.from(photos).forEach(photo => {
 					const img = photo.getElementsByTagName('img')[0];
 					const src = img.dataset.src;

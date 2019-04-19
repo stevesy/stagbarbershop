@@ -1,21 +1,9 @@
-.page-services {
-	.page-content {
-		@include media-breakpoint-up(md) {
-			font-size: 2rem;
-		}
+.services-list {
+	@include media-breakpoint-up(md) {
+		font-size: 2rem;
+	}
 
-		.container-fluid {
-			max-width: 800px;
-		}
-
-		li {
-			margin-bottom: 0.25em;
-		}
-
-		.small {
-			@include media-breakpoint-up(md) {
-				font-size: 1rem;
-			}
-		}
+	li {
+		margin-bottom: 0.25em;
 	}
 }

@@ -2,15 +2,15 @@
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-			
+
 			<?php while ( have_posts() ) : the_post(); ?>
 
 					<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<?php get_template_part( 'template-parts/page-header' ); ?>
+						<?php get_template_part( 'template-parts/entry-header' ); ?>
 
-						<div class="page-content py-5 bg-white">
+						<div class="entry-content py-5 bg-white">
 							<div class="container-fluid py-2 py-md-3 my-md-3">
-								<ul class="list-unstyled mb-4 mb-md-5">
+								<ul class="services-list list-unstyled mb-4 mb-md-5 mx-auto" style="max-width:770px;">
 									<?php if ( have_rows( 'services' ) ) : ?>
 										<?php while ( have_rows( 'services' ) ) : the_row(); ?>
 											<li class="d-flex justify-content-between">

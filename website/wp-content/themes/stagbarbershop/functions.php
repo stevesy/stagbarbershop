@@ -86,12 +86,12 @@ if ( ! function_exists( 'stagbarbershop_setup' ) ) :
 				array(
 					'name'	=> esc_html__( 'Primary', '@@textdomain' ),
 					'slug'	=> 'primary',
-					'color'	=> '#185da7',
+					'color'	=> '#276481',
 				),
 				array(
 					'name'	=> esc_html__( 'Secondary', '@@textdomain' ),
 					'slug'	=> 'secondary',
-					'color'	=> '#9b1f21',
+					'color'	=> '#a3403b',
 				),
 				array(
 					'name'	=> esc_html__( 'Light', '@@textdomain' ),
@@ -152,16 +152,6 @@ function stagbarbershop_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-
-	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Sidebar', 'stagbarbershop' ),
-		'id'            => 'footer-sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'stagbarbershop' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s pl-lg-4 pb-4">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="widget-title text-uppercase mb-1">',
-		'after_title'   => '</h2>',
-	) );
 }
 add_action( 'widgets_init', 'stagbarbershop_widgets_init' );
 
@@ -169,13 +159,13 @@ add_action( 'widgets_init', 'stagbarbershop_widgets_init' );
  * Enqueue scripts and styles.
  */
 function stagbarbershop_scripts() {
-	wp_enqueue_style( 'fontawesome', '//use.fontawesome.com/releases/v5.2.0/css/all.css' );
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Slabo+27px|Oswald:700' );
 	wp_enqueue_style( 'tiny-slider-css', '//unpkg.com/tiny-slider@2.8.8/dist/tiny-slider.css' );
-	wp_enqueue_style( 'stagbarbershop-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'site-style', get_stylesheet_uri() );
 
+	wp_enqueue_script( 'polyfills', '//cdn.polyfill.io/v2/polyfill.min.js', '', '', true  );
 	wp_enqueue_script( 'tiny-slider-js', '//unpkg.com/tiny-slider@2.8.8/dist/min/tiny-slider.js', '', '', true );
-	wp_enqueue_script( 'stagbarbershop-navigation', get_template_directory_uri() . '/public/js/site.js', '', '', true );
+	wp_enqueue_script( 'site-js', get_template_directory_uri() . '/public/js/site.js', '', '', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -248,10 +238,11 @@ add_action( 'admin_menu', 'remove_menu_pages' );
 
 if ( function_exists('acf_add_options_page') ) {
 	acf_add_options_page(array(
-		'page_title' 	=> 'Theme General Settings',
-		'menu_title'	=> 'Theme Settings',
-		'menu_slug' 	=> 'theme-general-settings',
+		'page_title' 	=> 'Location & Hours',
+		'menu_title'	=> 'Location & Hours',
+		'menu_slug' 	=> 'theme-location-hours',
 		'capability'	=> 'edit_posts',
-		'redirect'		=> false
+		'redirect'		=> false,
+		'icon_url'		=> 'dashicons-location'
 	));
 }

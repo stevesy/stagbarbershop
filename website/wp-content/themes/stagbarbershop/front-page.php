@@ -18,9 +18,9 @@ get_header();
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<?php get_template_part( 'template-parts/page-header' ); ?>
+					<?php get_template_part( 'template-parts/entry-header' ); ?>
 
-					<div class="page-content py-5 bg-white">
+					<div class="entry-content py-5 bg-white">
 						<div class="container-fluid py-2 py-md-3 my-md-3">
 							<?php the_content(); ?>
 						</div>
