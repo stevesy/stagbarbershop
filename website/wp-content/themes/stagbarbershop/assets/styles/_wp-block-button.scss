@@ -54,28 +54,29 @@
 			border-radius: $btn-border-radius;
 		}
 	}
+}
 
-	.wp-block-button__link {
-		font-family: $headings-font-family;
-		font-weight: 700;
-		text-transform: uppercase;
-		white-space: nowrap;
-		vertical-align: middle;
-		user-select: none;
-		border: $btn-border-width solid transparent;
-		font-size: $font-size-lg;
-		line-height: $line-height-base;
-		padding: $btn-padding-y-lg $btn-padding-x-lg;
-		transition: $btn-transition;
+.wp-block-button__link {
+	font-family: $headings-font-family;
+	font-weight: $btn-font-weight;
+	text-transform: uppercase;
+	white-space: nowrap;
+	vertical-align: middle;
+	user-select: none;
+	min-width: 200px;
+	border: $btn-border-width solid transparent;
+	font-size: $font-size-lg;
+	line-height: $line-height-base;
+	padding: $btn-padding-y-lg $btn-padding-x-lg;
+	transition: $btn-transition;
 
-		&:hover {
-			text-decoration: none;
-		}
+	&:hover {
+		text-decoration: none;
+	}
 
-		@each $color, $value in $theme-colors {
-			&.has-#{$color}-background-color:hover {
-				background-color: darken($value,10%) !important;
-			}
+	@each $color, $value in $theme-colors {
+		&.has-#{$color}-background-color:hover {
+			background-color: darken($value,10%) !important;
 		}
 	}
 }

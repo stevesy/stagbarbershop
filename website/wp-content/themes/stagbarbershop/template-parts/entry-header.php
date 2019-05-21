@@ -28,7 +28,7 @@
 			<?php if ( !empty( get_field('button_text') ) && !empty( get_field('button_link') ) ) : ?>
 				<div class="mt-4">
 					<a
-						class="btn btn-outline-white btn-lg px-5"
+						class="btn btn-outline-white btn-lg"
 						href="<?php echo get_field('button_link'); ?>"
 						<?php echo get_field('new_window') ? 'target="_blank" rel="noopener"' : ''; ?>
 					>

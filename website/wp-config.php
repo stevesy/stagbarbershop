@@ -20,13 +20,13 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'stagbarbershop');
+define('DB_NAME', 'i4061853_wp1');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'i4061853_wp1');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', 'N.Aext1VOhycKSKP96Z93');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');

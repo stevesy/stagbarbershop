@@ -4,10 +4,11 @@
 
 .btn {
 	font-family: $headings-font-family;
-	font-weight: 700;
 	text-transform: uppercase;
-	// font-size: 1.25rem;
-	// min-width: 200/16 * 1rem;
+}
+
+.btn-lg {
+	min-width: 200px;
 }
 
 .btn-white {

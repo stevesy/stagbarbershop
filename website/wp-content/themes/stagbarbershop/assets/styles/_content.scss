@@ -49,6 +49,7 @@
 			bottom: 0;
 		}
 
+		[data-action="start"],
 		[data-action="stop"] {
 			display: none;
 		}
@@ -109,6 +110,12 @@
 
 	.container-fluid {
 		max-width: 1000px;
+
+		& > *:not(.alignfull):not(.alignwide) {
+			max-width: 800px;
+			margin-right: auto;
+			margin-left: auto;
+		}
 	}
 
 	p,
