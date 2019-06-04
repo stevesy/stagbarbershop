@@ -236,6 +236,9 @@ function remove_menu_pages() {
 }
 add_action( 'admin_menu', 'remove_menu_pages' );
 
+/**
+ * Custom Options Page
+ */
 if ( function_exists('acf_add_options_page') ) {
 	acf_add_options_page(array(
 		'page_title' 	=> 'Location & Hours',
@@ -245,4 +248,21 @@ if ( function_exists('acf_add_options_page') ) {
 		'redirect'		=> false,
 		'icon_url'		=> 'dashicons-location'
 	));
+}
+
+/**
+ * Custom Blocks
+ */
+function register_acf_block_types() {
+	acf_register_block(array(
+		'name' 				=> 'service',
+		'title' 			=> __('Service'),
+		'description'		=> __('A service block.'),
+		'render_template'	=> 'template-parts/block-acf-service.php',
+		'category' 			=> 'layout'
+	));
+}
+
+if ( function_exists('acf_register_block_type') ) {
+	add_action('acf/init', 'register_acf_block_types');
 }

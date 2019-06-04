@@ -12,9 +12,11 @@ Text Domain: stagbarbershop
 
 @import "bootstrap";
 
-@import "wp-colors";
-@import "wp-block-columns";
-@import "wp-block-button";
+@import "colors";
+
+@import "block-acf-service";
+@import "block-wp-columns";
+@import "block-wp-button";
 
 @import "base";
 @import "navbar";

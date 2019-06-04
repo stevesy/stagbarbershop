@@ -4763,6 +4763,10 @@ a.text-white:hover, a.text-white:focus {
 .has-white-color {
   color: #fff !important; }
 
+@media (min-width: 768px) {
+  .acf-block-service {
+    font-size: 2rem; } }
+
 .wp-block-columns {
   flex-wrap: wrap; }
 
@@ -5224,13 +5228,6 @@ a.text-white:hover, a.text-white:focus {
 .page-home .wp-block-image figure img {
   display: block;
   margin: 0 auto; }
-
-@media (min-width: 768px) {
-  .services-list {
-    font-size: 2rem; } }
-
-.services-list li {
-  margin-bottom: 0.25em; }
 
 .products-list {
   font-size: 1rem;

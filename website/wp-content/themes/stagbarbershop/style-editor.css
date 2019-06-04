@@ -1,5 +1,8 @@
+@import '//fonts.googleapis.com/css?family=Slabo+27px|Oswald:700';
+
 .wp-block {
 	max-width: 1000px;
+	font-family: Slabo 27px, serif;
 }
 
 .wp-block[data-align="wide"] {
@@ -14,16 +17,42 @@
 	color: #a3403b;
 }
 
+.editor-post-title__input,
 .text-uppercase {
 	text-transform: uppercase;
 }
 
-h1, h2, h3, h4, h5, h6,
+.editor-post-title__input {
+	text-align: center;
+}
+
+.editor-post-title__input,
+.wp-block h1,
+.wp-block h2,
+.wp-block h3,
+.wp-block h4,
+.wp-block h5,
+.wp-block h6,
 .wp-block-button {
-	font-family: sans-serif;
+	font-family: Oswald, sans-serif;
 }
 
 .wp-block-button__link {
 	text-transform: uppercase;
 	font-weight: 700;
+	border-radius: 0;
+	padding: 0.5rem 1.75rem;
+	min-width: 200px;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.justify-content-between {
+	justify-content: space-between;
+}
+
+.acf-block-service {
+	font-size: 2rem;
 }
