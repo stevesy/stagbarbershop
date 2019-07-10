@@ -1,32 +1,28 @@
 {
-  "name": "stagbabershop",
-  "version": "1.0.0",
-  "main": "Gruntfile.js",
-  "devDependencies": {
-    "autoprefixer": "^6.5.0",
-    "babel-cli": "^6.18.0",
-    "babel-preset-es2015": "^6.18.0",
-    "babelify": "^7.3.0",
-    "grunt": "^1.0.0",
-    "grunt-browserify": "^5.0.0",
-    "grunt-contrib-imagemin": "^1.0.1",
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-uglify": "^2.0.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-modernizr": "^1.0.2",
-    "grunt-newer": "^1.2.0",
-    "grunt-postcss": "^0.8.0"
-  },
+  "name": "stag-barbershop",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "gulpfile.js",
   "scripts": {
-    "js": "grunt browserify",
-    "css": "grunt sass && grunt postcss",
-    "imagemin": "grunt newer:imagemin",
-    "build": "grunt modernizr && npm run js && npm run css && npm run imagemin",
-    "release": "grunt modernizr && npm run js && grunt uglify && npm run css && npm run imagemin",
-    "watch": "npm run build && grunt watch"
+    "build-css": "node-sass website/wp-content/themes/stagbarbershop/assets/styles/ -o website/wp-content/themes/stagbarbershop/",
+    "watch-css": "npm run build-css && node-sass -w website/wp-content/themes/stagbarbershop/assets/styles/ -o website/wp-content/themes/stagbarbershop/ --source-map true",
+    "postcss": "./node_modules/postcss-cli/bin/postcss website/wp-content/themes/stagbarbershop/**/*.css --replace -u autoprefixer",
+    "build-js": "webpack --config webpack.config.js",
+    "watch-js": "npm run build-js && webpack --config webpack.config.js -w",
+    "build": "npm run build-css && npm run postcss && npm run build-js",
+    "watch": "npm-run-all -p watch-css watch-js"
   },
-  "dependencies": {
-    "flexslider": "^2.6.3",
-    "jquery": "^3.1.1"
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "autoprefixer": "^9.5.1",
+    "babel-loader": "^8.0.5",
+    "bootstrap": "^4.3.1",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.2",
+    "vanilla-lazyload": "^8.17.0",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0"
   }
 }

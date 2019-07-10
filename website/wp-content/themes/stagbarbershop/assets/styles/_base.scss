@@ -1,0 +1,25 @@
+.screen-reader-text {
+	@include sr-only();
+}
+
+.btn {
+	font-family: $headings-font-family;
+	text-transform: uppercase;
+}
+
+.btn-lg {
+	min-width: 200px;
+}
+
+.btn-white {
+	background-color: #fff;
+	color: $body-color;
+}
+
+.text-underline {
+	text-decoration: underline !important;
+}
+
+.overflow-hidden {
+	overflow: hidden !important;
+}

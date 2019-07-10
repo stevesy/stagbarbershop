@@ -1,0 +1,64 @@
+.wp-block-columns {
+	flex-wrap: wrap;
+}
+
+.wp-block-column {
+	position: relative;
+	flex: 0 0 100%;
+	width: 100%;
+	min-height: 1px;
+
+	&:nth-child(odd),
+	&:not(:last-child) {
+		margin-right: 0;
+	}
+
+	&:not(:last-child):not(:only-child) {
+		@include media-breakpoint-up(sm) {
+			padding-right: $grid-gutter-width / 2;
+		}
+	}
+
+	&:not(:first-child) {
+		margin-left: 0;
+
+		@include media-breakpoint-up(sm) {
+			padding-left: $grid-gutter-width / 2;
+		}
+	}
+
+	.has-2-columns & {
+		@include media-breakpoint-up(sm) {
+			flex-basis: 50%;
+			max-width: 50%;
+		}
+	}
+
+	.has-3-columns & {
+		@include media-breakpoint-up(sm) {
+			flex-basis: 33.333%;
+			max-width: 33.333%;
+		}
+	}
+
+	.has-4-columns & {
+		@include media-breakpoint-up(sm) {
+			flex-basis: 25%;
+			max-width: 25%;
+		}
+	}
+
+	.has-5-columns & {
+		@include media-breakpoint-up(sm) {
+			flex-basis: 20%;
+			max-width: 20%;
+		}
+	}
+
+	.has-6-columns & {
+		@include media-breakpoint-up(sm) {
+			flex-basis: 16.667%;
+			max-width: 16.667%;
+		}
+	}
+}

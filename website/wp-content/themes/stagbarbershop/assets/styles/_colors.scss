@@ -1,0 +1,11 @@
+@each $color, $value in $theme-colors {
+	.has-#{$color}-background-color {
+		background-color: $value !important;
+	}
+}
+
+@each $color, $value in $theme-colors {
+	.has-#{$color}-color {
+		color: $value !important;
+	}
+}

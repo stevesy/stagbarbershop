@@ -1,0 +1,30 @@
+/*!
+Theme Name: Stag Barbershop
+Author: Steve Kaufman
+Description: Wordpress theme for Stag Barbershop
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: stagbarbershop
+*/
+
+@import "variables";
+
+@import "bootstrap";
+
+@import "colors";
+
+@import "block-acf-service";
+@import "block-wp-columns";
+@import "block-wp-button";
+
+@import "base";
+@import "navbar";
+@import "footer";
+@import "content";
+
+@import "page-home";
+@import "page-services";
+@import "page-products";
+@import "page-crew";
+@import "page-contact";

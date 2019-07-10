@@ -1,0 +1,15 @@
+.page-home {
+	.wp-block-image {
+		figure,
+		figcaption {
+			display: block;
+		}
+
+		figure {
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+}

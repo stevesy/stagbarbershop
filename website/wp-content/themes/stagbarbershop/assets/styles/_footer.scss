@@ -1,0 +1,63 @@
+.site-footer {
+	position: relative;
+	z-index: 9;
+
+	.logo {
+		display: block;
+		height: 125px;
+		margin: 0 auto 1rem;
+
+		@include media-breakpoint-up(md) {
+			height: 150px;
+		}
+	}
+
+	a {
+		color: inherit;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	.footer-location {
+		@include media-breakpoint-up(md) {
+			font-size: 1.25rem;
+			max-width: 12em;
+		}
+
+		@include media-breakpoint-up(lg) {
+			max-width: none;
+		}
+
+		h2,
+		.h2 {
+			@include media-breakpoint-up(md) {
+				font-size: 1.5rem;
+			}
+		}
+
+		.social {
+			font-size: 1.75rem;
+		}
+	}
+
+	.map {
+		height: 250px;
+		margin: 0 $grid-gutter-width/2 * -1;
+
+		@include media-breakpoint-up(md) {
+			height: 500px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			height: 400px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
