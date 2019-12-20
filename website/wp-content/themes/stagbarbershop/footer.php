@@ -19,7 +19,7 @@
 					<div class="row flex-md-row-reverse">
 						<div class="col-md-6">
 							<div class="map">
-								<img src="<?php echo get_template_directory_uri(); ?>/public/img/map.png" alt="map" />
+								<img src="/wp-content/uploads/2019/12/map-3.png" alt="map" />
 							</div>
 						</div>
 						<div class="col-md-6 d-flex align-items-center justify-content-center">
